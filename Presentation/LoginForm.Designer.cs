@@ -122,7 +122,7 @@ namespace Presentation
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLogin.Location = new System.Drawing.Point(310, 227);
+            this.btnLogin.Location = new System.Drawing.Point(310, 234);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(408, 40);
             this.btnLogin.TabIndex = 5;
@@ -136,7 +136,7 @@ namespace Presentation
             this.linkRestablecerContraseña.AutoSize = true;
             this.linkRestablecerContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkRestablecerContraseña.LinkColor = System.Drawing.Color.DimGray;
-            this.linkRestablecerContraseña.Location = new System.Drawing.Point(409, 291);
+            this.linkRestablecerContraseña.Location = new System.Drawing.Point(409, 296);
             this.linkRestablecerContraseña.Name = "linkRestablecerContraseña";
             this.linkRestablecerContraseña.Size = new System.Drawing.Size(204, 17);
             this.linkRestablecerContraseña.TabIndex = 0;

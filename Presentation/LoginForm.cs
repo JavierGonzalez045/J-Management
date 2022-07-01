@@ -100,11 +100,32 @@ namespace Presentation
         {
             if (txtUsuario.Text != "Usuario")
             {
-
+                if (txtContraseña.Text != "Contraseña")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtUsuario.Text.Trim(), txtContraseña.Text.Trim());
+                    
+                    if (validLogin == true)
+                    {
+                        MainForm mainForm = new MainForm();
+                        mainForm.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        msgError("Nombre de usuario o contraseña incorrecta.\nPor favor intente nuevamente.");
+                        txtContraseña.Clear();
+                        txtUsuario.Focus();
+                    }
+                }
+                else
+                {
+                    msgError("Debe ingresar la contraseña.");
+                } 
             }
             else
             {
-                msgError("Debe ingresar el nombre de usuario");
+                msgError("Debe ingresar el nombre de usuario.");
             }
         }
 
