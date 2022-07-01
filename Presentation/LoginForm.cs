@@ -109,12 +109,13 @@ namespace Presentation
                     {
                         MainForm mainForm = new MainForm();
                         mainForm.Show();
+                        mainForm.FormClosed += cerrarSesion;
                         this.Hide();
                     }
                     else
                     {
                         msgError("Nombre de usuario o contraseña incorrecta.\nPor favor intente nuevamente.");
-                        txtContraseña.Clear();
+                        txtContraseña.Text = "Contraseña";
                         txtUsuario.Focus();
                     }
                 }
@@ -128,12 +129,22 @@ namespace Presentation
                 msgError("Debe ingresar el nombre de usuario.");
             }
         }
-
         private void msgError(string msg)
         {
             lblErrorMessage.Text = msg;
             lblErrorMessage.Visible = true;
             alertIcon.Visible = true;
+        }
+
+        private void cerrarSesion(object sender, FormClosedEventArgs e)
+        {
+            txtContraseña.Text = "Contraseña";
+            txtContraseña.UseSystemPasswordChar = false;
+            txtUsuario.Text = "Usuario";
+            alertIcon.Visible = false;
+            lblErrorMessage.Visible = false;
+            this.Show();
+            //txtUsuario.Focus();
         }
     }
 }
