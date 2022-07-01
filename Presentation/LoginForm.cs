@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Domain;
+using Common.Cache;
 
 namespace Presentation
 {

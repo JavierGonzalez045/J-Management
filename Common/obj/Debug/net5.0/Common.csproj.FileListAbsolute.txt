@@ -1,0 +1,12 @@
+C:\Proyecto\Sistema De Inventario\J-Management\Common\bin\Debug\net5.0\Common.deps.json
+C:\Proyecto\Sistema De Inventario\J-Management\Common\bin\Debug\net5.0\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Common\bin\Debug\net5.0\ref\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Common\bin\Debug\net5.0\Common.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.csproj.AssemblyReference.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.AssemblyInfoInputs.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.AssemblyInfo.cs
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.csproj.CoreCompileInputs.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\ref\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Common\obj\Debug\net5.0\Common.pdb

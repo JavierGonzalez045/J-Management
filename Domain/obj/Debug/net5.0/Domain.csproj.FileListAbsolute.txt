@@ -13,3 +13,5 @@ C:\Proyecto\Sistema De Inventario\J-Management\Domain\obj\Debug\net5.0\Domain.cs
 C:\Proyecto\Sistema De Inventario\J-Management\Domain\obj\Debug\net5.0\Domain.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Domain\obj\Debug\net5.0\ref\Domain.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Domain\obj\Debug\net5.0\Domain.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Domain\bin\Debug\net5.0\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Domain\bin\Debug\net5.0\Common.pdb

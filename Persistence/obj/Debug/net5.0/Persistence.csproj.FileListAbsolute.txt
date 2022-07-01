@@ -10,3 +10,6 @@ C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Pers
 C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\ref\Persistence.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\Common.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.csproj.CopyComplete

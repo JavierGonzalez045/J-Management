@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using Common.Cache;
 
 namespace Persistence
 {
@@ -25,6 +26,14 @@ namespace Persistence
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            UserLoginCache.idUser = reader.GetInt32(0);
+                            UserLoginCache.FirsName = reader.GetString(3);
+                            UserLoginCache.LastName = reader.GetString(4);
+                            UserLoginCache.Position = reader.GetString(5);
+                            UserLoginCache.Email = reader.GetString(6);
+                        }
                         return true;
                     }
                     else

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Cache;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,18 @@ namespace Presentation
             if (MessageBox.Show("¿Está seguro de que desea cerrar sesión?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void LoadUserData()
+        {
+            lblName.Text = $"{UserLoginCache.FirsName} {UserLoginCache.LastName}";
+            lblPosition.Text = UserLoginCache.Position;
+            lblEmail.Text = UserLoginCache.Email;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LoadUserData();
         }
     }
 }

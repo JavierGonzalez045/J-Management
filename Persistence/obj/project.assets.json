@@ -661,6 +661,16 @@
             "rid": "win"
           }
         }
+      },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
       }
     }
   },
@@ -2514,10 +2524,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Common >= 1.0.0",
       "Microsoft.Data.SqlClient >= 4.1.0",
       "System.Data.SqlClient >= 4.8.3"
     ]
@@ -2553,7 +2569,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Common\\Common.csproj": {
+              "projectPath": "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Common\\Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -49,3 +49,5 @@ C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-win
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.LoginForm.resources
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.MainForm.resources
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\Common.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\Common.pdb

@@ -662,10 +662,21 @@
           }
         }
       },
+      "Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Common.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Common": "1.0.0",
           "Persistence": "1.0.0"
         },
         "compile": {
@@ -679,6 +690,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Common": "1.0.0",
           "Microsoft.Data.SqlClient": "4.1.0",
           "System.Data.SqlClient": "4.8.3"
         },
@@ -2542,6 +2554,11 @@
         "version.txt"
       ]
     },
+    "Common/1.0.0": {
+      "type": "project",
+      "path": "../Common/Common.csproj",
+      "msbuildProject": "../Common/Common.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -2555,6 +2572,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "Common >= 1.0.0",
       "Domain >= 1.0.0"
     ]
   },
@@ -2590,6 +2608,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Common\\Common.csproj": {
+              "projectPath": "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Common\\Common.csproj"
+            },
             "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Domain\\Domain.csproj"
             }
