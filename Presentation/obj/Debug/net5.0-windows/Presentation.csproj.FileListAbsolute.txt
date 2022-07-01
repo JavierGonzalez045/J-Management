@@ -6,7 +6,6 @@ C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-win
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\ref\Presentation.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\Presentation.pdb
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.csproj.AssemblyReference.cache
-C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.Form1.resources
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.csproj.GenerateResource.cache
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.GeneratedMSBuildEditorConfig.editorconfig
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.AssemblyInfoInputs.cache
@@ -48,3 +47,5 @@ C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-win
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.LoginForm.resources
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.MainForm.resources

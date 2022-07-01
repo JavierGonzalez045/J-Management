@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,8 +40,11 @@ namespace Presentation
             this.linkRestablecerContraseña = new System.Windows.Forms.LinkLabel();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.lblErrorMessage = new System.Windows.Forms.Label();
+            this.alertIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,7 +61,7 @@ namespace Presentation
             // 
             this.panel2.BackColor = System.Drawing.Color.DimGray;
             this.panel2.Enabled = false;
-            this.panel2.Location = new System.Drawing.Point(310, 99);
+            this.panel2.Location = new System.Drawing.Point(310, 91);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(408, 1);
             this.panel2.TabIndex = 1;
@@ -79,7 +82,7 @@ namespace Presentation
             // 
             this.panel3.BackColor = System.Drawing.Color.DimGray;
             this.panel3.Enabled = false;
-            this.panel3.Location = new System.Drawing.Point(310, 177);
+            this.panel3.Location = new System.Drawing.Point(310, 160);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(408, 1);
             this.panel3.TabIndex = 2;
@@ -90,7 +93,7 @@ namespace Presentation
             this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(312, 75);
+            this.txtUsuario.Location = new System.Drawing.Point(312, 67);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(406, 20);
             this.txtUsuario.TabIndex = 1;
@@ -104,7 +107,7 @@ namespace Presentation
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(312, 154);
+            this.txtContraseña.Location = new System.Drawing.Point(312, 137);
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(406, 20);
             this.txtContraseña.TabIndex = 2;
@@ -119,12 +122,13 @@ namespace Presentation
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLogin.Location = new System.Drawing.Point(310, 220);
+            this.btnLogin.Location = new System.Drawing.Point(310, 227);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(408, 40);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Acceder";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // linkRestablecerContraseña
             // 
@@ -132,7 +136,7 @@ namespace Presentation
             this.linkRestablecerContraseña.AutoSize = true;
             this.linkRestablecerContraseña.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.linkRestablecerContraseña.LinkColor = System.Drawing.Color.DimGray;
-            this.linkRestablecerContraseña.Location = new System.Drawing.Point(409, 288);
+            this.linkRestablecerContraseña.Location = new System.Drawing.Point(409, 291);
             this.linkRestablecerContraseña.Name = "linkRestablecerContraseña";
             this.linkRestablecerContraseña.Size = new System.Drawing.Size(204, 17);
             this.linkRestablecerContraseña.TabIndex = 0;
@@ -161,12 +165,38 @@ namespace Presentation
             this.btnMinimizar.TabStop = false;
             this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
-            // Form1
+            // lblErrorMessage
+            // 
+            this.lblErrorMessage.AutoSize = true;
+            this.lblErrorMessage.Font = new System.Drawing.Font("MS Reference Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblErrorMessage.ForeColor = System.Drawing.Color.DarkGray;
+            this.lblErrorMessage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblErrorMessage.Location = new System.Drawing.Point(343, 187);
+            this.lblErrorMessage.Name = "lblErrorMessage";
+            this.lblErrorMessage.Size = new System.Drawing.Size(109, 18);
+            this.lblErrorMessage.TabIndex = 9;
+            this.lblErrorMessage.Text = "Error Message";
+            this.lblErrorMessage.Visible = false;
+            // 
+            // alertIcon
+            // 
+            this.alertIcon.Image = ((System.Drawing.Image)(resources.GetObject("alertIcon.Image")));
+            this.alertIcon.Location = new System.Drawing.Point(315, 184);
+            this.alertIcon.Name = "alertIcon";
+            this.alertIcon.Size = new System.Drawing.Size(28, 25);
+            this.alertIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.alertIcon.TabIndex = 10;
+            this.alertIcon.TabStop = false;
+            this.alertIcon.Visible = false;
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.alertIcon);
+            this.Controls.Add(this.lblErrorMessage);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.linkRestablecerContraseña);
@@ -178,13 +208,14 @@ namespace Presentation
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.alertIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +233,7 @@ namespace Presentation
         private System.Windows.Forms.LinkLabel linkRestablecerContraseña;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Label lblErrorMessage;
+        private System.Windows.Forms.PictureBox alertIcon;
     }
 }

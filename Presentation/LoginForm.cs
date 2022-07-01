@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Domain;
 
 namespace Presentation
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -93,6 +94,25 @@ namespace Presentation
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             arrastrarLogin();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text != "Usuario")
+            {
+
+            }
+            else
+            {
+                msgError("Debe ingresar el nombre de usuario");
+            }
+        }
+
+        private void msgError(string msg)
+        {
+            lblErrorMessage.Text = msg;
+            lblErrorMessage.Visible = true;
+            alertIcon.Visible = true;
         }
     }
 }
