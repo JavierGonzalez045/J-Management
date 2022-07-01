@@ -108,10 +108,12 @@ namespace Presentation
                     
                     if (validLogin == true)
                     {
+                        this.Hide();
+                        WelcomeForm splashScreen = new WelcomeForm();
+                        splashScreen.ShowDialog();
                         MainForm mainForm = new MainForm();
                         mainForm.Show();
                         mainForm.FormClosed += cerrarSesion;
-                        this.Hide();
                     }
                     else
                     {
@@ -145,7 +147,6 @@ namespace Presentation
             alertIcon.Visible = false;
             lblErrorMessage.Visible = false;
             this.Show();
-            //txtUsuario.Focus();
         }
     }
 }

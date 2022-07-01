@@ -51,3 +51,4 @@ C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-win
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.MainForm.resources
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\Common.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\Common.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.WelcomeForm.resources

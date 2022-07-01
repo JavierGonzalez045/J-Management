@@ -14,8 +14,8 @@ namespace Presentation
         [STAThread]
         static void Main()
         {
+            //Application.EnableVisualStyles();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginForm());
         }
