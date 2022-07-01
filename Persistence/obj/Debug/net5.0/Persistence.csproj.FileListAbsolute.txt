@@ -1,0 +1,12 @@
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\Persistence.deps.json
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\Persistence.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\ref\Persistence.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\bin\Debug\net5.0\Persistence.pdb
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.csproj.AssemblyReference.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfoInputs.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfo.cs
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.csproj.CoreCompileInputs.cache
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\ref\Persistence.dll
+C:\Proyecto\Sistema De Inventario\J-Management\Persistence\obj\Debug\net5.0\Persistence.pdb
