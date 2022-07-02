@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "OcNXJRevxB9ej8itJgr/obY8fj8dk+8SQz7FDRLypENOQkf0Skwur5t3xPx9I/f20cxKRpZ5VDgn3Nt5oE1c0g==",
+  "dgSpecHash": "ePNVlT62Yf3zFMw1iAU/+01Clta029ojbZB3+p4B2c0Fv6/4boxjMn5vaZGhttPjgNshlWm36fVa+ooT9wrCvg==",
   "success": true,
   "projectFilePath": "C:\\Proyecto\\Sistema De Inventario\\J-Management\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JAVIER-PC\\.nuget\\packages\\azure.core\\1.6.0\\azure.core.1.6.0.nupkg.sha512",
     "C:\\Users\\JAVIER-PC\\.nuget\\packages\\azure.identity\\1.3.0\\azure.identity.1.3.0.nupkg.sha512",
+    "C:\\Users\\JAVIER-PC\\.nuget\\packages\\fontawesome.sharp\\6.1.1\\fontawesome.sharp.6.1.1.nupkg.sha512",
     "C:\\Users\\JAVIER-PC\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "C:\\Users\\JAVIER-PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\JAVIER-PC\\.nuget\\packages\\microsoft.data.sqlclient\\4.1.0\\microsoft.data.sqlclient.4.1.0.nupkg.sha512",

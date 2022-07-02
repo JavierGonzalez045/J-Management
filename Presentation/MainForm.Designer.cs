@@ -439,12 +439,14 @@ namespace Presentation
 
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Button btnMedia;
         private System.Windows.Forms.Panel panelMediaSubMenu;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panelPlayer;
+        private System.Windows.Forms.Panel panelChildForm;
+        private System.Windows.Forms.Button btnMedia;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Panel panelToolsSubMenu;
         private System.Windows.Forms.Button button12;
@@ -459,7 +461,5 @@ namespace Presentation
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnPlaylist;
-        private System.Windows.Forms.Panel panelPlayer;
-        private System.Windows.Forms.Panel panelChildForm;
     }
 }
