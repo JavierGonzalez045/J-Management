@@ -69,7 +69,7 @@ namespace Presentation
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblUsername.ForeColor = System.Drawing.Color.DarkGray;
-            this.lblUsername.Location = new System.Drawing.Point(418, 191);
+            this.lblUsername.Location = new System.Drawing.Point(411, 191);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(121, 32);
             this.lblUsername.TabIndex = 2;
