@@ -56,56 +56,56 @@ namespace Presentation
             showSubMenu(panelMediaSubMenu);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void iconButton2_Click(object sender, EventArgs e)
         {
             openChildFormInPanel(new Form2());
             hideSubMenu();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void iconButton3_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void iconButton4_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void iconButton5_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-#endregion
+        #endregion
 
-        #region PlaylistSubMenu
+        #region
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
             showSubMenu(panelPlaylistSubMenu);
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void iconButton8_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void iconButton7_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void iconButton6_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-#endregion
+        #endregion
 
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
@@ -113,37 +113,45 @@ namespace Presentation
             hideSubMenu();
         }
 
+
+
+        //hideSubMenu();
+
+
+
+
         #region ToolsSubMenu
         private void btnTools_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelToolsSubMenu);
+            hideSubMenu();
         }
-
-        private void button15_Click(object sender, EventArgs e)
+        private void iconButton12_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void iconButton11_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void iconButton10_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void iconButton9_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
 
-#endregion
+        #endregion
+
         private void btnHelp_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
+
 
         private Form activeForm = null;
         private void openChildFormInPanel(Form childForm)
