@@ -111,9 +111,9 @@ namespace Presentation
                         this.Hide();
                         WelcomeForm splashScreen = new WelcomeForm();
                         splashScreen.ShowDialog();
-                        //MainForm mainForm = new MainForm();
-                        //mainForm.Show();
-                        //mainForm.FormClosed += cerrarSesion;
+                        MainForm mainForm = new MainForm();
+                        mainForm.Show();
+                        mainForm.FormClosed += cerrarSesion;
                     }
                     else
                     {

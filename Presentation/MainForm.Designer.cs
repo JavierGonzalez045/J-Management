@@ -29,6 +29,7 @@ namespace Presentation
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelToolsSubMenu = new System.Windows.Forms.Panel();
@@ -51,12 +52,19 @@ namespace Presentation
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.panelPlayer = new System.Windows.Forms.Panel();
+            this.btnInicio = new System.Windows.Forms.PictureBox();
+            this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconCurrentChildForm = new FontAwesome.Sharp.IconPictureBox();
+            this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSidebar.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
             this.panelMediaSubMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
+            this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -89,9 +97,9 @@ namespace Presentation
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHelp.IconSize = 32;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 775);
+            this.btnHelp.Location = new System.Drawing.Point(0, 816);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHelp.Size = new System.Drawing.Size(233, 45);
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "Help";
@@ -108,7 +116,7 @@ namespace Presentation
             this.panelToolsSubMenu.Controls.Add(this.iconButton11);
             this.panelToolsSubMenu.Controls.Add(this.iconButton12);
             this.panelToolsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 610);
+            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 651);
             this.panelToolsSubMenu.Name = "panelToolsSubMenu";
             this.panelToolsSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelToolsSubMenu.TabIndex = 7;
@@ -200,9 +208,9 @@ namespace Presentation
             this.btnTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTools.IconSize = 32;
             this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTools.Location = new System.Drawing.Point(0, 565);
+            this.btnTools.Location = new System.Drawing.Point(0, 606);
             this.btnTools.Name = "btnTools";
-            this.btnTools.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnTools.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnTools.Size = new System.Drawing.Size(233, 45);
             this.btnTools.TabIndex = 6;
             this.btnTools.Text = "Tools";
@@ -222,9 +230,9 @@ namespace Presentation
             this.btnEqualizer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEqualizer.IconSize = 32;
             this.btnEqualizer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEqualizer.Location = new System.Drawing.Point(0, 520);
+            this.btnEqualizer.Location = new System.Drawing.Point(0, 561);
             this.btnEqualizer.Name = "btnEqualizer";
-            this.btnEqualizer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEqualizer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnEqualizer.Size = new System.Drawing.Size(233, 45);
             this.btnEqualizer.TabIndex = 5;
             this.btnEqualizer.Text = "Equalizer";
@@ -241,7 +249,7 @@ namespace Presentation
             this.panelPlaylistSubMenu.Controls.Add(this.iconButton7);
             this.panelPlaylistSubMenu.Controls.Add(this.iconButton8);
             this.panelPlaylistSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPlaylistSubMenu.Location = new System.Drawing.Point(0, 355);
+            this.panelPlaylistSubMenu.Location = new System.Drawing.Point(0, 396);
             this.panelPlaylistSubMenu.Name = "panelPlaylistSubMenu";
             this.panelPlaylistSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelPlaylistSubMenu.TabIndex = 4;
@@ -333,9 +341,9 @@ namespace Presentation
             this.btnPlaylist.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlaylist.IconSize = 32;
             this.btnPlaylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylist.Location = new System.Drawing.Point(0, 310);
+            this.btnPlaylist.Location = new System.Drawing.Point(0, 351);
             this.btnPlaylist.Name = "btnPlaylist";
-            this.btnPlaylist.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnPlaylist.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPlaylist.Size = new System.Drawing.Size(233, 45);
             this.btnPlaylist.TabIndex = 3;
             this.btnPlaylist.Text = "Playlist management";
@@ -352,7 +360,7 @@ namespace Presentation
             this.panelMediaSubMenu.Controls.Add(this.iconButton3);
             this.panelMediaSubMenu.Controls.Add(this.iconButton2);
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 145);
+            this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 186);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
             this.panelMediaSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelMediaSubMenu.TabIndex = 2;
@@ -445,9 +453,9 @@ namespace Presentation
             this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMedia.IconSize = 32;
             this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedia.Location = new System.Drawing.Point(0, 100);
+            this.btnMedia.Location = new System.Drawing.Point(0, 141);
             this.btnMedia.Name = "btnMedia";
-            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnMedia.Size = new System.Drawing.Size(233, 45);
             this.btnMedia.TabIndex = 1;
             this.btnMedia.Text = "Media";
@@ -457,46 +465,92 @@ namespace Presentation
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.btnInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(233, 100);
+            this.panelLogo.Size = new System.Drawing.Size(233, 141);
             this.panelLogo.TabIndex = 0;
             // 
-            // panelPlayer
+            // btnInicio
             // 
-            this.panelPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPlayer.Location = new System.Drawing.Point(250, 0);
-            this.panelPlayer.Name = "panelPlayer";
-            this.panelPlayer.Size = new System.Drawing.Size(684, 73);
-            this.panelPlayer.TabIndex = 1;
+            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.Location = new System.Drawing.Point(17, -8);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(197, 149);
+            this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnInicio.TabIndex = 0;
+            this.btnInicio.TabStop = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            // 
+            // panelTitleBar
+            // 
+            this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.panelTitleBar.Controls.Add(this.iconCurrentChildForm);
+            this.panelTitleBar.Controls.Add(this.lblTitleChildForm);
+            this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
+            this.panelTitleBar.Name = "panelTitleBar";
+            this.panelTitleBar.Size = new System.Drawing.Size(917, 82);
+            this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconCurrentChildForm
+            // 
+            this.iconCurrentChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
+            this.iconCurrentChildForm.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
+            this.iconCurrentChildForm.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconCurrentChildForm.IconSize = 31;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(37, 29);
+            this.iconCurrentChildForm.Name = "iconCurrentChildForm";
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 31);
+            this.iconCurrentChildForm.TabIndex = 0;
+            this.iconCurrentChildForm.TabStop = false;
+            // 
+            // lblTitleChildForm
+            // 
+            this.lblTitleChildForm.AutoSize = true;
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblTitleChildForm.Location = new System.Drawing.Point(68, 30);
+            this.lblTitleChildForm.Name = "lblTitleChildForm";
+            this.lblTitleChildForm.Size = new System.Drawing.Size(67, 25);
+            this.lblTitleChildForm.TabIndex = 1;
+            this.lblTitleChildForm.Text = "Inicio";
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 73);
+            this.panelChildForm.Location = new System.Drawing.Point(250, 82);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(684, 488);
+            this.panelChildForm.Size = new System.Drawing.Size(917, 479);
             this.panelChildForm.TabIndex = 2;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 561);
+            this.ClientSize = new System.Drawing.Size(1167, 561);
             this.Controls.Add(this.panelChildForm);
-            this.Controls.Add(this.panelPlayer);
+            this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSidebar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.panelSidebar.ResumeLayout(false);
             this.panelToolsSubMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
             this.panelMediaSubMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
+            this.panelTitleBar.ResumeLayout(false);
+            this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -505,7 +559,7 @@ namespace Presentation
 
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Panel panelLogo;
-        private System.Windows.Forms.Panel panelPlayer;
+        private System.Windows.Forms.Panel panelTitleBar;
         private System.Windows.Forms.Panel panelChildForm;
         private FontAwesome.Sharp.IconButton btnMedia;
         private System.Windows.Forms.Panel panelMediaSubMenu;
@@ -527,5 +581,8 @@ namespace Presentation
         private FontAwesome.Sharp.IconButton iconButton10;
         private FontAwesome.Sharp.IconButton iconButton11;
         private FontAwesome.Sharp.IconButton iconButton12;
+        private System.Windows.Forms.PictureBox btnInicio;
+        private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
+        private System.Windows.Forms.Label lblTitleChildForm;
     }
 }
