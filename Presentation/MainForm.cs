@@ -18,7 +18,9 @@ namespace Presentation
         // Fields
         private IconButton currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
 
+        // Constructor
         public MainForm()
         {
             InitializeComponent();
@@ -26,6 +28,11 @@ namespace Presentation
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 45);
             panelSidebar.Controls.Add(leftBorderBtn);
+            // Form
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
         //Structs
@@ -77,6 +84,24 @@ namespace Presentation
             }
         }
 
+        private void openChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                // Open only form
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+            lblTitleChildForm.Text = childForm.Text;
+        }
+
         private void customizeDesign()
         {
             panelMediaSubMenu.Visible = false;
@@ -118,7 +143,7 @@ namespace Presentation
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            openChildFormInPanel(new Form2());
+            openChildForm(new Form2());
             hideSubMenu();
         }
 
@@ -137,7 +162,7 @@ namespace Presentation
             hideSubMenu();
         }
 
-        #endregion
+        #endregion PlaylistSubMenu
 
         #region
         private void btnPlaylist_Click(object sender, EventArgs e)
@@ -171,7 +196,7 @@ namespace Presentation
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
-            openChildFormInPanel(new Form3());
+            openChildForm(new Form3());
             hideSubMenu();
         }
 
@@ -227,7 +252,8 @@ namespace Presentation
         }
         private void btnInicio_Click(object sender, EventArgs e)
         {
-
+            currentChildForm.Close();
+            Reset();
         }
 
         private void Reset()
@@ -248,6 +274,24 @@ namespace Presentation
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                WindowState = FormWindowState.Maximized;
+            else
+                WindowState = FormWindowState.Normal;
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
