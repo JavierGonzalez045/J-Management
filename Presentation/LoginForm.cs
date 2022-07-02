@@ -113,7 +113,7 @@ namespace Presentation
                         splashScreen.ShowDialog();
                         //MainForm mainForm = new MainForm();
                         //mainForm.Show();
-                        mainForm.FormClosed += cerrarSesion;
+                        //mainForm.FormClosed += cerrarSesion;
                     }
                     else
                     {
