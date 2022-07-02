@@ -84,9 +84,11 @@ namespace Presentation
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnHelp.IconColor = System.Drawing.Color.Black;
+            this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnHelp.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHelp.IconSize = 32;
+            this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.Location = new System.Drawing.Point(0, 775);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -94,6 +96,7 @@ namespace Presentation
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "Help";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHelp.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHelp.UseVisualStyleBackColor = true;
             this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
@@ -192,9 +195,11 @@ namespace Presentation
             this.btnTools.FlatAppearance.BorderSize = 0;
             this.btnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTools.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTools.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnTools.IconColor = System.Drawing.Color.Black;
+            this.btnTools.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnTools.IconColor = System.Drawing.Color.Gainsboro;
             this.btnTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTools.IconSize = 32;
+            this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTools.Location = new System.Drawing.Point(0, 565);
             this.btnTools.Name = "btnTools";
             this.btnTools.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -202,6 +207,7 @@ namespace Presentation
             this.btnTools.TabIndex = 6;
             this.btnTools.Text = "Tools";
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTools.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTools.UseVisualStyleBackColor = true;
             this.btnTools.Click += new System.EventHandler(this.btnTools_Click);
             // 
@@ -211,9 +217,11 @@ namespace Presentation
             this.btnEqualizer.FlatAppearance.BorderSize = 0;
             this.btnEqualizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEqualizer.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEqualizer.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnEqualizer.IconColor = System.Drawing.Color.Black;
+            this.btnEqualizer.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnEqualizer.IconColor = System.Drawing.Color.Gainsboro;
             this.btnEqualizer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEqualizer.IconSize = 32;
+            this.btnEqualizer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEqualizer.Location = new System.Drawing.Point(0, 520);
             this.btnEqualizer.Name = "btnEqualizer";
             this.btnEqualizer.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -221,6 +229,7 @@ namespace Presentation
             this.btnEqualizer.TabIndex = 5;
             this.btnEqualizer.Text = "Equalizer";
             this.btnEqualizer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEqualizer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEqualizer.UseVisualStyleBackColor = true;
             this.btnEqualizer.Click += new System.EventHandler(this.btnEqualizer_Click);
             // 
@@ -319,9 +328,11 @@ namespace Presentation
             this.btnPlaylist.FlatAppearance.BorderSize = 0;
             this.btnPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlaylist.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPlaylist.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnPlaylist.IconColor = System.Drawing.Color.Black;
+            this.btnPlaylist.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnPlaylist.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPlaylist.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPlaylist.IconSize = 32;
+            this.btnPlaylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlaylist.Location = new System.Drawing.Point(0, 310);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -329,6 +340,7 @@ namespace Presentation
             this.btnPlaylist.TabIndex = 3;
             this.btnPlaylist.Text = "Playlist management";
             this.btnPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlaylist.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPlaylist.UseVisualStyleBackColor = true;
             this.btnPlaylist.Click += new System.EventHandler(this.btnPlaylist_Click);
             // 
@@ -407,6 +419,7 @@ namespace Presentation
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.iconButton2.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
@@ -427,16 +440,18 @@ namespace Presentation
             this.btnMedia.FlatAppearance.BorderSize = 0;
             this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnMedia.IconColor = System.Drawing.Color.Black;
+            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
             this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMedia.IconSize = 32;
+            this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMedia.Location = new System.Drawing.Point(0, 100);
             this.btnMedia.Name = "btnMedia";
             this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnMedia.Size = new System.Drawing.Size(233, 45);
             this.btnMedia.TabIndex = 1;
             this.btnMedia.Text = "Media";
-            this.btnMedia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMedia.UseVisualStyleBackColor = true;
             this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
             // 
