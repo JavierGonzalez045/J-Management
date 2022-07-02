@@ -400,19 +400,19 @@ namespace Presentation
             // panelPlayer
             // 
             this.panelPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelPlayer.Location = new System.Drawing.Point(250, 435);
+            this.panelPlayer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelPlayer.Location = new System.Drawing.Point(250, 0);
             this.panelPlayer.Name = "panelPlayer";
-            this.panelPlayer.Size = new System.Drawing.Size(684, 126);
+            this.panelPlayer.Size = new System.Drawing.Size(684, 73);
             this.panelPlayer.TabIndex = 1;
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(250, 73);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(684, 435);
+            this.panelChildForm.Size = new System.Drawing.Size(684, 488);
             this.panelChildForm.TabIndex = 2;
             // 
             // MainForm
