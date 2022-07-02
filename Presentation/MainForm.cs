@@ -44,6 +44,12 @@ namespace Presentation
             public static Color color4 = Color.FromArgb(95, 77, 221);
             public static Color color5 = Color.FromArgb(249, 88, 155);
             public static Color color6 = Color.FromArgb(24, 161, 251);
+            public static Color lightRed = Color.FromArgb(252, 87, 83);
+            public static Color darkRed = Color.FromArgb(213, 39, 53);
+            public static Color lightYellow = Color.FromArgb(253, 188, 64);
+            public static Color darkYellow = Color.FromArgb(242, 179, 65);
+            public static Color lightGreen = Color.FromArgb(54, 200, 75);
+            public static Color darkGreen = Color.FromArgb(18, 193, 30);
         }
 
         // Methods
@@ -58,8 +64,8 @@ namespace Presentation
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                //currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
+                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //Left border button
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
@@ -99,7 +105,8 @@ namespace Presentation
             panelChildForm.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitleChildForm.Text = childForm.Text;
+            //lblTitleChildForm.Text = childForm.Text;
+            lblTitleChildForm.Text = currentBtn.Text;
         }
 
         private void customizeDesign()
@@ -197,7 +204,6 @@ namespace Presentation
         {
             ActivateButton(sender, RGBColors.color3);
             openChildForm(new Form3());
-            hideSubMenu();
         }
 
 
@@ -205,7 +211,7 @@ namespace Presentation
         private void btnTools_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
-            hideSubMenu();
+            showSubMenu(panelToolsSubMenu);
         }
         private void iconButton12_Click(object sender, EventArgs e)
         {
@@ -229,11 +235,12 @@ namespace Presentation
 
         #endregion
 
+
         private void btnHelp_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
-            hideSubMenu();
         }
+
 
 
         private Form activeForm = null;
@@ -292,6 +299,42 @@ namespace Presentation
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnClose_MouseHover(object sender, EventArgs e)
+        {
+            btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btnClose.ForeColor = RGBColors.darkRed;
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnClose.ForeColor = RGBColors.lightRed;
+        }
+
+        private void btnMaximize_MouseHover(object sender, EventArgs e)
+        {
+            btnMaximize.IconChar = FontAwesome.Sharp.IconChar.CircleChevronUp;
+            btnMaximize.ForeColor = RGBColors.darkGreen;
+        }
+
+        private void btnMaximize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMaximize.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMaximize.ForeColor = RGBColors.lightGreen;
+        }
+
+        private void btnMinimize_MouseHover(object sender, EventArgs e)
+        {
+            btnMinimize.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            btnMinimize.ForeColor = RGBColors.darkYellow;
+        }
+
+        private void btnMinimize_MouseLeave(object sender, EventArgs e)
+        {
+            btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMinimize.ForeColor = RGBColors.lightYellow;
         }
     }
 }
