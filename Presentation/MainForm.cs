@@ -50,7 +50,8 @@ namespace Presentation
             public static Color darkYellow = Color.FromArgb(242, 179, 65);
             public static Color lightGreen = Color.FromArgb(54, 200, 75);
             public static Color darkGreen = Color.FromArgb(18, 193, 30);
-            public static Color test = Color.FromArgb(12, 22, 53);
+            public static Color gainsboroColor = Color.FromArgb(220, 220, 220);
+            public static Color lightBlue = Color.FromArgb(0, 113, 236);
         }
 
         // Methods
@@ -371,6 +372,18 @@ namespace Presentation
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
             }
+        }
+
+        private void btnLogout_MouseHover(object sender, EventArgs e)
+        {
+            btnLogout.IconColor = RGBColors.lightBlue;
+            btnLogout.ForeColor = RGBColors.lightBlue;
+        }
+
+        private void btnLogout_MouseLeave(object sender, EventArgs e)
+        {
+            btnLogout.IconColor = RGBColors.gainsboroColor;
+            btnLogout.ForeColor = RGBColors.gainsboroColor;
         }
     }
 }
