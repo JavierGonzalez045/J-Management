@@ -13,6 +13,9 @@
     <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="MessageBoxForm\LogoutMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
