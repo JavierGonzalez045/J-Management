@@ -50,6 +50,7 @@ namespace Presentation
             public static Color darkYellow = Color.FromArgb(242, 179, 65);
             public static Color lightGreen = Color.FromArgb(54, 200, 75);
             public static Color darkGreen = Color.FromArgb(18, 193, 30);
+            public static Color test = Color.FromArgb(12, 22, 53);
         }
 
         // Methods

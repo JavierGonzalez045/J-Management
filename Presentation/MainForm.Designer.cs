@@ -31,6 +31,7 @@ namespace Presentation
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
+            this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelToolsSubMenu = new System.Windows.Forms.Panel();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
@@ -52,6 +53,7 @@ namespace Presentation
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.iconButton13 = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
@@ -61,7 +63,6 @@ namespace Presentation
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSidebar.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
@@ -74,13 +75,13 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
             // 
             this.panelSidebar.AutoScroll = true;
-            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(7)))), ((int)(((byte)(17)))));
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(35)))));
+            this.panelSidebar.Controls.Add(this.btnLogout);
             this.panelSidebar.Controls.Add(this.btnHelp);
             this.panelSidebar.Controls.Add(this.panelToolsSubMenu);
             this.panelSidebar.Controls.Add(this.btnTools);
@@ -93,8 +94,29 @@ namespace Presentation
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(250, 927);
+            this.panelSidebar.Size = new System.Drawing.Size(250, 561);
             this.panelSidebar.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
+            this.btnLogout.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLogout.IconSize = 30;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 849);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 10);
+            this.btnLogout.Size = new System.Drawing.Size(233, 45);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Text = "Cerrar sesión";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
             // btnHelp
             // 
@@ -107,10 +129,10 @@ namespace Presentation
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnHelp.IconSize = 32;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 816);
+            this.btnHelp.Location = new System.Drawing.Point(0, 804);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnHelp.Size = new System.Drawing.Size(250, 45);
+            this.btnHelp.Size = new System.Drawing.Size(233, 45);
             this.btnHelp.TabIndex = 8;
             this.btnHelp.Text = "Help";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -126,9 +148,9 @@ namespace Presentation
             this.panelToolsSubMenu.Controls.Add(this.iconButton11);
             this.panelToolsSubMenu.Controls.Add(this.iconButton12);
             this.panelToolsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 651);
+            this.panelToolsSubMenu.Location = new System.Drawing.Point(0, 639);
             this.panelToolsSubMenu.Name = "panelToolsSubMenu";
-            this.panelToolsSubMenu.Size = new System.Drawing.Size(250, 165);
+            this.panelToolsSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelToolsSubMenu.TabIndex = 7;
             // 
             // iconButton9
@@ -143,7 +165,7 @@ namespace Presentation
             this.iconButton9.Location = new System.Drawing.Point(0, 120);
             this.iconButton9.Name = "iconButton9";
             this.iconButton9.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton9.Size = new System.Drawing.Size(250, 40);
+            this.iconButton9.Size = new System.Drawing.Size(233, 40);
             this.iconButton9.TabIndex = 3;
             this.iconButton9.Text = "iconButton9";
             this.iconButton9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +184,7 @@ namespace Presentation
             this.iconButton10.Location = new System.Drawing.Point(0, 80);
             this.iconButton10.Name = "iconButton10";
             this.iconButton10.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton10.Size = new System.Drawing.Size(250, 40);
+            this.iconButton10.Size = new System.Drawing.Size(233, 40);
             this.iconButton10.TabIndex = 2;
             this.iconButton10.Text = "iconButton10";
             this.iconButton10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,7 +203,7 @@ namespace Presentation
             this.iconButton11.Location = new System.Drawing.Point(0, 40);
             this.iconButton11.Name = "iconButton11";
             this.iconButton11.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton11.Size = new System.Drawing.Size(250, 40);
+            this.iconButton11.Size = new System.Drawing.Size(233, 40);
             this.iconButton11.TabIndex = 1;
             this.iconButton11.Text = "iconButton11";
             this.iconButton11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -200,7 +222,7 @@ namespace Presentation
             this.iconButton12.Location = new System.Drawing.Point(0, 0);
             this.iconButton12.Name = "iconButton12";
             this.iconButton12.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton12.Size = new System.Drawing.Size(250, 40);
+            this.iconButton12.Size = new System.Drawing.Size(233, 40);
             this.iconButton12.TabIndex = 0;
             this.iconButton12.Text = "iconButton12";
             this.iconButton12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,10 +240,10 @@ namespace Presentation
             this.btnTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnTools.IconSize = 32;
             this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTools.Location = new System.Drawing.Point(0, 606);
+            this.btnTools.Location = new System.Drawing.Point(0, 594);
             this.btnTools.Name = "btnTools";
             this.btnTools.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnTools.Size = new System.Drawing.Size(250, 45);
+            this.btnTools.Size = new System.Drawing.Size(233, 45);
             this.btnTools.TabIndex = 6;
             this.btnTools.Text = "Tools";
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -240,10 +262,10 @@ namespace Presentation
             this.btnEqualizer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEqualizer.IconSize = 32;
             this.btnEqualizer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEqualizer.Location = new System.Drawing.Point(0, 561);
+            this.btnEqualizer.Location = new System.Drawing.Point(0, 549);
             this.btnEqualizer.Name = "btnEqualizer";
             this.btnEqualizer.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnEqualizer.Size = new System.Drawing.Size(250, 45);
+            this.btnEqualizer.Size = new System.Drawing.Size(233, 45);
             this.btnEqualizer.TabIndex = 5;
             this.btnEqualizer.Text = "Equalizer";
             this.btnEqualizer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,9 +281,9 @@ namespace Presentation
             this.panelPlaylistSubMenu.Controls.Add(this.iconButton7);
             this.panelPlaylistSubMenu.Controls.Add(this.iconButton8);
             this.panelPlaylistSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPlaylistSubMenu.Location = new System.Drawing.Point(0, 396);
+            this.panelPlaylistSubMenu.Location = new System.Drawing.Point(0, 384);
             this.panelPlaylistSubMenu.Name = "panelPlaylistSubMenu";
-            this.panelPlaylistSubMenu.Size = new System.Drawing.Size(250, 165);
+            this.panelPlaylistSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelPlaylistSubMenu.TabIndex = 4;
             // 
             // iconButton1
@@ -276,7 +298,7 @@ namespace Presentation
             this.iconButton1.Location = new System.Drawing.Point(0, 120);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton1.Size = new System.Drawing.Size(250, 40);
+            this.iconButton1.Size = new System.Drawing.Size(233, 40);
             this.iconButton1.TabIndex = 3;
             this.iconButton1.Text = "iconButton1";
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,7 +317,7 @@ namespace Presentation
             this.iconButton6.Location = new System.Drawing.Point(0, 80);
             this.iconButton6.Name = "iconButton6";
             this.iconButton6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton6.Size = new System.Drawing.Size(250, 40);
+            this.iconButton6.Size = new System.Drawing.Size(233, 40);
             this.iconButton6.TabIndex = 2;
             this.iconButton6.Text = "iconButton6";
             this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,7 +336,7 @@ namespace Presentation
             this.iconButton7.Location = new System.Drawing.Point(0, 40);
             this.iconButton7.Name = "iconButton7";
             this.iconButton7.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton7.Size = new System.Drawing.Size(250, 40);
+            this.iconButton7.Size = new System.Drawing.Size(233, 40);
             this.iconButton7.TabIndex = 1;
             this.iconButton7.Text = "iconButton7";
             this.iconButton7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,7 +355,7 @@ namespace Presentation
             this.iconButton8.Location = new System.Drawing.Point(0, 0);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton8.Size = new System.Drawing.Size(250, 40);
+            this.iconButton8.Size = new System.Drawing.Size(233, 40);
             this.iconButton8.TabIndex = 0;
             this.iconButton8.Text = "iconButton8";
             this.iconButton8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -351,10 +373,10 @@ namespace Presentation
             this.btnPlaylist.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPlaylist.IconSize = 32;
             this.btnPlaylist.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlaylist.Location = new System.Drawing.Point(0, 351);
+            this.btnPlaylist.Location = new System.Drawing.Point(0, 339);
             this.btnPlaylist.Name = "btnPlaylist";
             this.btnPlaylist.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnPlaylist.Size = new System.Drawing.Size(250, 45);
+            this.btnPlaylist.Size = new System.Drawing.Size(233, 45);
             this.btnPlaylist.TabIndex = 3;
             this.btnPlaylist.Text = "Playlist management";
             this.btnPlaylist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -370,9 +392,9 @@ namespace Presentation
             this.panelMediaSubMenu.Controls.Add(this.iconButton3);
             this.panelMediaSubMenu.Controls.Add(this.iconButton2);
             this.panelMediaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 186);
+            this.panelMediaSubMenu.Location = new System.Drawing.Point(0, 174);
             this.panelMediaSubMenu.Name = "panelMediaSubMenu";
-            this.panelMediaSubMenu.Size = new System.Drawing.Size(250, 165);
+            this.panelMediaSubMenu.Size = new System.Drawing.Size(233, 165);
             this.panelMediaSubMenu.TabIndex = 2;
             // 
             // iconButton5
@@ -387,7 +409,7 @@ namespace Presentation
             this.iconButton5.Location = new System.Drawing.Point(0, 120);
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton5.Size = new System.Drawing.Size(250, 40);
+            this.iconButton5.Size = new System.Drawing.Size(233, 40);
             this.iconButton5.TabIndex = 3;
             this.iconButton5.Text = "iconButton5";
             this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,7 +428,7 @@ namespace Presentation
             this.iconButton4.Location = new System.Drawing.Point(0, 80);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton4.Size = new System.Drawing.Size(250, 40);
+            this.iconButton4.Size = new System.Drawing.Size(233, 40);
             this.iconButton4.TabIndex = 2;
             this.iconButton4.Text = "iconButton4";
             this.iconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -425,7 +447,7 @@ namespace Presentation
             this.iconButton3.Location = new System.Drawing.Point(0, 40);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton3.Size = new System.Drawing.Size(250, 40);
+            this.iconButton3.Size = new System.Drawing.Size(233, 40);
             this.iconButton3.TabIndex = 1;
             this.iconButton3.Text = "iconButton3";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -445,7 +467,7 @@ namespace Presentation
             this.iconButton2.Location = new System.Drawing.Point(0, 0);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.iconButton2.Size = new System.Drawing.Size(250, 40);
+            this.iconButton2.Size = new System.Drawing.Size(233, 40);
             this.iconButton2.TabIndex = 0;
             this.iconButton2.Text = "iconButton2";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -463,10 +485,10 @@ namespace Presentation
             this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMedia.IconSize = 32;
             this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedia.Location = new System.Drawing.Point(0, 141);
+            this.btnMedia.Location = new System.Drawing.Point(0, 129);
             this.btnMedia.Name = "btnMedia";
             this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMedia.Size = new System.Drawing.Size(250, 45);
+            this.btnMedia.Size = new System.Drawing.Size(233, 45);
             this.btnMedia.TabIndex = 1;
             this.btnMedia.Text = "Media";
             this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -475,19 +497,35 @@ namespace Presentation
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.iconButton13);
             this.panelLogo.Controls.Add(this.btnInicio);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(250, 141);
+            this.panelLogo.Size = new System.Drawing.Size(233, 129);
             this.panelLogo.TabIndex = 0;
+            // 
+            // iconButton13
+            // 
+            this.iconButton13.FlatAppearance.BorderSize = 0;
+            this.iconButton13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton13.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton13.ForeColor = System.Drawing.Color.Black;
+            this.iconButton13.IconChar = FontAwesome.Sharp.IconChar.Navicon;
+            this.iconButton13.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconButton13.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton13.Location = new System.Drawing.Point(171, 24);
+            this.iconButton13.Name = "iconButton13";
+            this.iconButton13.Size = new System.Drawing.Size(51, 45);
+            this.iconButton13.TabIndex = 1;
+            this.iconButton13.UseVisualStyleBackColor = true;
             // 
             // btnInicio
             // 
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
-            this.btnInicio.Location = new System.Drawing.Point(17, -8);
+            this.btnInicio.Location = new System.Drawing.Point(3, 0);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(197, 149);
+            this.btnInicio.Size = new System.Drawing.Size(162, 85);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
@@ -504,7 +542,7 @@ namespace Presentation
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(993, 76);
+            this.panelTitleBar.Size = new System.Drawing.Size(684, 76);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -512,12 +550,13 @@ namespace Presentation
             // 
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(188)))), ((int)(((byte)(64)))));
             this.btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Circle;
             this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(188)))), ((int)(((byte)(64)))));
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimize.IconSize = 28;
-            this.btnMinimize.Location = new System.Drawing.Point(886, 11);
+            this.btnMinimize.Location = new System.Drawing.Point(577, 11);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(28, 29);
             this.btnMinimize.TabIndex = 4;
@@ -530,12 +569,13 @@ namespace Presentation
             // 
             this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(200)))), ((int)(((byte)(75)))));
             this.btnMaximize.IconChar = FontAwesome.Sharp.IconChar.Circle;
             this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(200)))), ((int)(((byte)(75)))));
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximize.IconSize = 28;
-            this.btnMaximize.Location = new System.Drawing.Point(922, 11);
+            this.btnMaximize.Location = new System.Drawing.Point(613, 11);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(28, 29);
             this.btnMaximize.TabIndex = 3;
@@ -548,12 +588,13 @@ namespace Presentation
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(87)))), ((int)(((byte)(83)))));
             this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(87)))), ((int)(((byte)(83)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 29;
-            this.btnClose.Location = new System.Drawing.Point(956, 11);
+            this.btnClose.Location = new System.Drawing.Point(647, 11);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(29, 29);
             this.btnClose.TabIndex = 2;
@@ -593,37 +634,25 @@ namespace Presentation
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(0, 0);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(993, 9);
+            this.panelShadow.Size = new System.Drawing.Size(684, 9);
             this.panelShadow.TabIndex = 0;
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
-            this.panelChildForm.Controls.Add(this.pictureBox1);
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(17)))), ((int)(((byte)(58)))));
             this.panelChildForm.Controls.Add(this.panelShadow);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 76);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(993, 851);
+            this.panelChildForm.Size = new System.Drawing.Size(684, 485);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(246, 110);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(492, 405);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1243, 927);
+            this.ClientSize = new System.Drawing.Size(934, 561);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSidebar);
@@ -632,7 +661,6 @@ namespace Presentation
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panelSidebar.ResumeLayout(false);
             this.panelToolsSubMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
@@ -646,7 +674,6 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelChildForm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -680,10 +707,11 @@ namespace Presentation
         private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Panel panelShadow;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconPictureBox btnMinimize;
         private FontAwesome.Sharp.IconPictureBox btnMaximize;
         private FontAwesome.Sharp.IconPictureBox btnClose;
         private FontAwesome.Sharp.IconButton btnHelp;
+        private FontAwesome.Sharp.IconButton btnLogout;
+        private FontAwesome.Sharp.IconButton iconButton13;
     }
 }
