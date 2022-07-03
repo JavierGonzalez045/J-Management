@@ -366,6 +366,17 @@ namespace Presentation
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            LogoutMessageBox frmMessageBox = new LogoutMessageBox();
+
+            if (ResultMessageBox.Show("¿Está seguro que desea cerrar sesión?",
+                "Cerrar sesión", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+                frmMessageBox.closeMessageBox();
+            }
         }
     }
 }

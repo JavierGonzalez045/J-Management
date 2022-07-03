@@ -28,11 +28,6 @@ namespace Presentation.MessageBoxForm
             btnCloseMessageBox.BackColor = RGBColors.darkBlue;
         }
 
-        private void btnNo_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void arrastrarMessageBox()
         {
             dragForm.ReleaseCapture();
@@ -49,14 +44,37 @@ namespace Presentation.MessageBoxForm
             this.Close();
         }
 
-        private void btnNo_Click_1(object sender, EventArgs e)
+        public LogoutMessageBox(string text, string caption, MessageBoxButtons buttons)
         {
-            this.Hide();
+            InitializeComponent();
+            this.labelMessage.Text = text;
+            this.labelCaption.Text = caption;
+            SetButtons(buttons, MessageBoxDefaultButton.Button1);//Set [Default Button 1]
         }
 
-        private void btnYes_Click(object sender, EventArgs e)
+        private void SetButtons(MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton)
         {
-            this.Hide();
+            switch (buttons)
+            {
+                case MessageBoxButtons.YesNo:
+                    //Yes Button
+                    btnYes.Visible = true;
+                    btnYes.Text = "Si";
+                    btnYes.DialogResult = DialogResult.Yes;//Set DialogResult
+
+                    //No Button
+                    btnNo.Visible = true;
+                    btnNo.Text = "No";
+                    btnNo.DialogResult = DialogResult.No;//Set DialogResult
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        public void closeMessageBox()
+        {
+            this.Close();
         }
     }
 }

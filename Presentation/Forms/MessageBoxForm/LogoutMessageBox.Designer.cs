@@ -63,9 +63,9 @@ namespace Presentation.MessageBoxForm
             this.labelCaption.ForeColor = System.Drawing.Color.White;
             this.labelCaption.Location = new System.Drawing.Point(12, 11);
             this.labelCaption.Name = "labelCaption";
-            this.labelCaption.Size = new System.Drawing.Size(103, 20);
+            this.labelCaption.Size = new System.Drawing.Size(97, 20);
             this.labelCaption.TabIndex = 0;
-            this.labelCaption.Text = "Cerrar sesión";
+            this.labelCaption.Text = "labelCaption";
             // 
             // btnCloseMessageBox
             // 
@@ -112,9 +112,9 @@ namespace Presentation.MessageBoxForm
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.labelMessage.Location = new System.Drawing.Point(84, 23);
             this.labelMessage.Name = "labelMessage";
-            this.labelMessage.Size = new System.Drawing.Size(287, 20);
+            this.labelMessage.Size = new System.Drawing.Size(107, 20);
             this.labelMessage.TabIndex = 1;
-            this.labelMessage.Text = "¿Está seguro que desea cerrar sesión?";
+            this.labelMessage.Text = "labelMessage";
             // 
             // panelButtons
             // 
@@ -137,9 +137,8 @@ namespace Presentation.MessageBoxForm
             this.btnNo.Size = new System.Drawing.Size(100, 35);
             this.btnNo.TabIndex = 1;
             this.btnNo.Tag = "No";
-            this.btnNo.Text = "No";
+            this.btnNo.Text = "Button2";
             this.btnNo.UseVisualStyleBackColor = false;
-            this.btnNo.Click += new System.EventHandler(this.btnNo_Click_1);
             // 
             // btnYes
             // 
@@ -152,9 +151,8 @@ namespace Presentation.MessageBoxForm
             this.btnYes.Size = new System.Drawing.Size(100, 35);
             this.btnYes.TabIndex = 0;
             this.btnYes.Tag = "No";
-            this.btnYes.Text = "Si";
+            this.btnYes.Text = "Button1";
             this.btnYes.UseVisualStyleBackColor = false;
-            this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
             // LogoutMessageBox
             // 
