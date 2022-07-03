@@ -102,6 +102,7 @@ namespace Presentation
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnLogout.IconColor = System.Drawing.Color.Gainsboro;

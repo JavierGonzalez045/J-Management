@@ -378,12 +378,14 @@ namespace Presentation
         {
             btnLogout.IconColor = RGBColors.lightBlue;
             btnLogout.ForeColor = RGBColors.lightBlue;
+            btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
 
         private void btnLogout_MouseLeave(object sender, EventArgs e)
         {
             btnLogout.IconColor = RGBColors.gainsboroColor;
             btnLogout.ForeColor = RGBColors.gainsboroColor;
+            btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
         }
     }
 }
