@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
+using Presentation.MessageBoxForm;
+using static Presentation.Program;
 
 namespace Presentation
 {
@@ -33,25 +35,6 @@ namespace Presentation
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-        }
-
-        //Structs
-        private struct RGBColors
-        {
-            public static Color color1 = Color.FromArgb(172, 126, 241);
-            public static Color color2 = Color.FromArgb(249, 118, 176);
-            public static Color color3 = Color.FromArgb(253, 138, 114);
-            public static Color color4 = Color.FromArgb(95, 77, 221);
-            public static Color color5 = Color.FromArgb(249, 88, 155);
-            public static Color color6 = Color.FromArgb(24, 161, 251);
-            public static Color lightRed = Color.FromArgb(252, 87, 83);
-            public static Color darkRed = Color.FromArgb(213, 39, 53);
-            public static Color lightYellow = Color.FromArgb(253, 188, 64);
-            public static Color darkYellow = Color.FromArgb(242, 179, 65);
-            public static Color lightGreen = Color.FromArgb(54, 200, 75);
-            public static Color darkGreen = Color.FromArgb(18, 193, 30);
-            public static Color gainsboroColor = Color.FromArgb(220, 220, 220);
-            public static Color lightBlue = Color.FromArgb(0, 113, 236);
         }
 
         // Methods
@@ -273,16 +256,11 @@ namespace Presentation
             lblTitleChildForm.Text = "Inicio";
         }
 
-        // Drag form
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            dragForm.ReleaseCapture();
+            dragForm.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -378,14 +356,16 @@ namespace Presentation
         {
             btnLogout.IconColor = RGBColors.lightBlue;
             btnLogout.ForeColor = RGBColors.lightBlue;
-            btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
 
         private void btnLogout_MouseLeave(object sender, EventArgs e)
         {
             btnLogout.IconColor = RGBColors.gainsboroColor;
             btnLogout.ForeColor = RGBColors.gainsboroColor;
-            btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
         }
     }
 }

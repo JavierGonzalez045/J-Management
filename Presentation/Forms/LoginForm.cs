@@ -20,12 +20,6 @@ namespace Presentation
             InitializeComponent();
         }
 
-        // CON ESTO PODEMOS ARRASTRAR LOS FORMULARIOS
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         // CON ESTO AL MOMENTO DE HACER CLICK EN EL INPUT DE USUARIO, EL TEXTO DESAPACERE, SIMULANDO UN PLACEHOLDER
         private void txtUsuario_Enter(object sender, EventArgs e)
         {
@@ -83,8 +77,8 @@ namespace Presentation
         // FUNCIÓN PARA ARRASTRAR LOS FORMULARIOS DE WINDOWS.
         private void arrastrarLogin()
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            dragForm.ReleaseCapture();
+            dragForm.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)

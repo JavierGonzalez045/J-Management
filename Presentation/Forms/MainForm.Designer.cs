@@ -119,6 +119,7 @@ namespace Presentation
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             this.btnLogout.MouseLeave += new System.EventHandler(this.btnLogout_MouseLeave);
             this.btnLogout.MouseHover += new System.EventHandler(this.btnLogout_MouseHover);
             // 
