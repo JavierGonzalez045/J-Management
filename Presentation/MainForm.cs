@@ -337,5 +337,40 @@ namespace Presentation
             btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Circle;
             btnMinimize.ForeColor = RGBColors.lightYellow;
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+        }
+
+        private void CollapseMenu()
+        {
+            if (this.panelSidebar.Width > 200)
+            {
+                panelSidebar.Width = 100;
+                btnInicio.Visible = false;
+                btnMenu.Dock = DockStyle.Top;
+                this.panelLogo.Padding = new Padding(0,20,0,0);
+                foreach (Button menuButton in panelSidebar.Controls.OfType<Button>())
+                {
+                    menuButton.Text = "";
+                    menuButton.ImageAlign = ContentAlignment.MiddleCenter;
+                    menuButton.Padding = new Padding(0);
+                }
+            }
+            else
+            {
+                panelSidebar.Width = 250;
+                btnInicio.Visible = true;
+                btnMenu.Dock = DockStyle.None;
+                foreach (Button menuButton in panelSidebar.Controls.OfType<Button>())
+                {
+                    menuButton.Text = menuButton.Tag.ToString();
+                    menuButton.ImageAlign = ContentAlignment.MiddleLeft;
+                    menuButton.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+            }
+        }
     }
 }
