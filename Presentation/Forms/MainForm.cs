@@ -388,14 +388,21 @@ namespace Presentation
 
         private void loadUserData()
         {
-            lblCargo.Text = UserLoginCache.Position;
-            lblNombre.Text = $"{UserLoginCache.FirsName} {UserLoginCache.LastName}";
-            lblCorreo.Text = UserLoginCache.Email;
+            lblCargo.Text = UserCache.Position;
+            lblNombre.Text = $"{UserCache.FirsName} {UserCache.LastName}";
+            lblCorreo.Text = UserCache.Email;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
             loadUserData();
+
+            // ADMINISTRAR PERMISOS
+            if (UserCache.Position == Positions.Accounting)
+            {
+                btnEqualizer.Enabled = false;
+                btnEqualizer.Visible = false;
+            }
         }
 
         private void horaFecha_Tick(object sender, EventArgs e)

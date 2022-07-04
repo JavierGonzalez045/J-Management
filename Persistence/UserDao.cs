@@ -28,11 +28,11 @@ namespace Persistence
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.idUser = reader.GetInt32(0);
-                            UserLoginCache.FirsName = reader.GetString(3);
-                            UserLoginCache.LastName = reader.GetString(4);
-                            UserLoginCache.Position = reader.GetString(5);
-                            UserLoginCache.Email = reader.GetString(6);
+                            UserCache.idUser = reader.GetInt32(0);
+                            UserCache.FirsName = reader.GetString(3);
+                            UserCache.LastName = reader.GetString(4);
+                            UserCache.Position = reader.GetString(5);
+                            UserCache.Email = reader.GetString(6);
                         }
                         return true;
                     }
@@ -41,6 +41,18 @@ namespace Persistence
                         return false;
                     }
                 }
+            }
+        }
+
+        public void anyMethod()
+        {
+            if (UserCache.Position == Positions.Administrator)
+            {
+
+            }
+            if (UserCache.Position == Positions.Receptionist || UserCache.Position == Positions.Accounting)
+            {
+
             }
         }
     }

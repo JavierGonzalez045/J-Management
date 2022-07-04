@@ -15,5 +15,19 @@ namespace Domain
         {
             return userDao.Login(user, pass);
         }
+
+        public void anyMethod()
+        {
+            // SEGURIDAD Y PERMISOS
+
+            if (UserCache.Position == Positions.Administrator)
+            {
+
+            }
+            if (UserCache.Position == Positions.Receptionist || UserCache.Position == Positions.Accounting)
+            {
+
+            }
+        }
     }
 }

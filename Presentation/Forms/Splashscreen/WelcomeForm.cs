@@ -42,7 +42,7 @@ namespace Presentation
 
         private void WelcomeForm_Load(object sender, EventArgs e)
         {
-            lblUsername.Text = $"{UserLoginCache.FirsName} {UserLoginCache.LastName}";
+            lblUsername.Text = $"{UserCache.FirsName} {UserCache.LastName}";
             this.Opacity = 0.0;
             progressBar1.Value = 0;
             progressBar1.Minimum = 0;
