@@ -64,6 +64,7 @@ namespace Presentation
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
@@ -79,6 +80,7 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
             this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSidebar
@@ -655,6 +657,7 @@ namespace Presentation
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(17)))), ((int)(((byte)(58)))));
+            this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Controls.Add(this.lblFecha);
             this.panelChildForm.Controls.Add(this.lblHora);
             this.panelChildForm.Controls.Add(this.panelShadow);
@@ -664,13 +667,24 @@ namespace Presentation
             this.panelChildForm.Size = new System.Drawing.Size(1011, 903);
             this.panelChildForm.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(337, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(364, 325);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // lblFecha
             // 
             this.lblFecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(365, 308);
+            this.lblFecha.Location = new System.Drawing.Point(369, 463);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(241, 54);
             this.lblFecha.TabIndex = 2;
@@ -682,7 +696,7 @@ namespace Presentation
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHora.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblHora.Location = new System.Drawing.Point(279, 190);
+            this.lblHora.Location = new System.Drawing.Point(279, 345);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(450, 106);
             this.lblHora.TabIndex = 1;
@@ -721,6 +735,7 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -763,5 +778,6 @@ namespace Presentation
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horaFecha;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -112,6 +112,9 @@ namespace Presentation
                     else
                     {
                         msgError("Nombre de usuario o contraseña incorrecta.\nPor favor intente nuevamente.");
+                        txtContraseña.Clear();
+                        txtContraseña.UseSystemPasswordChar = false;
+                        txtContraseña.ForeColor = Color.DimGray;
                         txtContraseña.Text = "Contraseña";
                         txtUsuario.Focus();
                     }

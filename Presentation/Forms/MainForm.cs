@@ -192,7 +192,6 @@ namespace Presentation
             openChildForm(new Form3());
         }
 
-
         #region ToolsSubMenu
         private void btnTools_Click(object sender, EventArgs e)
         {
@@ -389,7 +388,7 @@ namespace Presentation
         private void horaFecha_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
-            lblFecha.Text = DateTime.Now.ToString("ddd dd, MM yyyy");
+            lblFecha.Text = DateTime.Now.ToString("ddd dd, MMMM yyyy");
         }
     }
 }
