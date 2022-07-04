@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Presentation
 {
-    public enum Icons
+    public enum EIcons
     {
         Chat = 0,
         Error = 1,

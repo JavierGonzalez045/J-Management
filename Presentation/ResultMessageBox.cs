@@ -13,15 +13,15 @@ namespace Presentation
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
             DialogResult result;
-            using (var msgForm = new LogoutMessageBox(text, caption, buttons))
+            using (var msgForm = new CustomMessageBox(text, caption, buttons))
                 result = msgForm.ShowDialog();
             return result;
         }
 
-        public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, Icons icon)
+        public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, EIcons icon)
         {
             DialogResult result;
-            using (var msgForm = new LogoutMessageBox(text, caption, buttons, icon))
+            using (var msgForm = new CustomMessageBox(text, caption, buttons, icon))
                 result = msgForm.ShowDialog();
             return result;
         }

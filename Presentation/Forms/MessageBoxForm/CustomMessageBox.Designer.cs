@@ -1,7 +1,7 @@
 ﻿
 namespace Presentation.MessageBoxForm
 {
-    partial class LogoutMessageBox
+    partial class CustomMessageBox
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Presentation.MessageBoxForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogoutMessageBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomMessageBox));
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.labelCaption = new System.Windows.Forms.Label();
             this.btnCloseMessageBox = new FontAwesome.Sharp.IconPictureBox();
@@ -83,8 +83,6 @@ namespace Presentation.MessageBoxForm
             this.btnCloseMessageBox.TabIndex = 1;
             this.btnCloseMessageBox.TabStop = false;
             this.btnCloseMessageBox.Click += new System.EventHandler(this.btnCloseMessageBox_Click);
-            this.btnCloseMessageBox.MouseLeave += new System.EventHandler(this.btnCloseMessageBox_MouseLeave);
-            this.btnCloseMessageBox.MouseHover += new System.EventHandler(this.btnCloseMessageBox_MouseHover);
             // 
             // panelBody
             // 
@@ -154,7 +152,7 @@ namespace Presentation.MessageBoxForm
             this.btnYes.Text = "Button1";
             this.btnYes.UseVisualStyleBackColor = false;
             // 
-            // LogoutMessageBox
+            // CustomMessageBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -166,7 +164,7 @@ namespace Presentation.MessageBoxForm
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LogoutMessageBox";
+            this.Name = "CustomMessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LogoutMessageBox";
             this.panelTitleBar.ResumeLayout(false);

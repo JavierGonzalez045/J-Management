@@ -10,7 +10,6 @@ namespace Presentation
 {
     static class Program
     {
-
         //Structs
         public struct RGBColors
         {
@@ -40,7 +39,7 @@ namespace Presentation
             //Application.EnableVisualStyles();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainForm());
         }
     }
 }

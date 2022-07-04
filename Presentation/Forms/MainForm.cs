@@ -16,6 +16,7 @@ namespace Presentation
 {
     public partial class MainForm : Form
     {
+        CustomMessageBox frmCustomBox = new CustomMessageBox();
 
         // Fields
         private IconButton currentBtn;
@@ -265,7 +266,15 @@ namespace Presentation
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (ResultMessageBox.Show("¿Está seguro que desea salir?",
+                "Salir", MessageBoxButtons.YesNo, EIcons.Exclamation) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                frmCustomBox.closeMessageBox();
+            }
         }
 
         private void btnMaximize_Click(object sender, EventArgs e)
@@ -366,17 +375,21 @@ namespace Presentation
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            LogoutMessageBox frmMessageBox = new LogoutMessageBox();
-
             if (ResultMessageBox.Show("¿Está seguro que desea cerrar sesión?",
-                "Cerrar sesión", MessageBoxButtons.YesNo, Icons.Question) == DialogResult.Yes)
+                "Cerrar sesión", MessageBoxButtons.YesNo, EIcons.Question) == DialogResult.Yes)
             {
                 this.Close();
             }
             else
             {
-                frmMessageBox.closeMessageBox();
+                frmCustomBox.closeMessageBox();
             }
+        }
+
+        private void horaFecha_Tick(object sender, EventArgs e)
+        {
+            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblFecha.Text = DateTime.Now.ToString("ddd dd, MM yyyy");
         }
     }
 }

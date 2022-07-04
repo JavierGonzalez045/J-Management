@@ -11,21 +11,11 @@ using static Presentation.Program;
 
 namespace Presentation.MessageBoxForm
 {
-    public partial class LogoutMessageBox : Form
+    public partial class CustomMessageBox : Form
     {
-        public LogoutMessageBox()
+        public CustomMessageBox()
         {
             InitializeComponent();
-        }
-
-        private void btnCloseMessageBox_MouseHover(object sender, EventArgs e)
-        {
-            btnCloseMessageBox.BackColor = RGBColors.lightRed;
-        }
-
-        private void btnCloseMessageBox_MouseLeave(object sender, EventArgs e)
-        {
-            btnCloseMessageBox.BackColor = RGBColors.darkBlue;
         }
 
         private void arrastrarMessageBox()
@@ -44,7 +34,7 @@ namespace Presentation.MessageBoxForm
             this.Close();
         }
 
-        public LogoutMessageBox(string text, string caption, MessageBoxButtons buttons)
+        public CustomMessageBox(string text, string caption, MessageBoxButtons buttons)
         {
             InitializeComponent();
             this.labelMessage.Text = text;
@@ -52,7 +42,7 @@ namespace Presentation.MessageBoxForm
             SetButtons(buttons, MessageBoxDefaultButton.Button1);//Set [Default Button 1]
         }
 
-        public LogoutMessageBox(string text, string caption, MessageBoxButtons buttons, Icons icon)
+        public CustomMessageBox(string text, string caption, MessageBoxButtons buttons, EIcons icon)
         {
             InitializeComponent();
             this.labelMessage.Text = text;
@@ -82,33 +72,32 @@ namespace Presentation.MessageBoxForm
 
         }
 
-        private void SetIcon(Icons icon)
+        private void SetIcon(EIcons icon)
         {
             switch (icon)
             {
-                case Icons.Error: //Error
+                case EIcons.Error: // Error icon
                     this.pictureBoxIcon.Image = Properties.Resources.error;
-                    //PrimaryColor = Color.FromArgb(224, 79, 95);
                     break;
 
-                case Icons.Chat: //Error
+                case EIcons.Chat: // Chat icon
                     this.pictureBoxIcon.Image = Properties.Resources.chat;
-                    //PrimaryColor = Color.FromArgb(224, 79, 95);
                     break;
 
-                case Icons.Exclamation: //Error
+                case EIcons.Exclamation: // Exclamation icon
                     this.pictureBoxIcon.Image = Properties.Resources.exclamation;
-                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    panelTitleBar.BackColor = RGBColors.darkRed;
+                    btnCloseMessageBox.BackColor = RGBColors.darkRed;
                     break;
 
-                case Icons.Information: //Error
+                case EIcons.Information: // Information icon
                     this.pictureBoxIcon.Image = Properties.Resources.information;
-                    //PrimaryColor = Color.FromArgb(224, 79, 95);
                     break;
 
-                case Icons.Question: //Error
+                case EIcons.Question: // Question icon
                     this.pictureBoxIcon.Image = Properties.Resources.question;
-                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    panelTitleBar.BackColor = RGBColors.darkBlue;
+                    btnCloseMessageBox.BackColor = RGBColors.darkBlue;
                     break;
             }
         }
