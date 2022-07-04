@@ -17,5 +17,13 @@ namespace Presentation
                 result = msgForm.ShowDialog();
             return result;
         }
+
+        public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, Icons icon)
+        {
+            DialogResult result;
+            using (var msgForm = new LogoutMessageBox(text, caption, buttons, icon))
+                result = msgForm.ShowDialog();
+            return result;
+        }
     }
 }

@@ -369,7 +369,7 @@ namespace Presentation
             LogoutMessageBox frmMessageBox = new LogoutMessageBox();
 
             if (ResultMessageBox.Show("¿Está seguro que desea cerrar sesión?",
-                "Cerrar sesión", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                "Cerrar sesión", MessageBoxButtons.YesNo, Icons.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

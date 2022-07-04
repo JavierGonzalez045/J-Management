@@ -52,7 +52,16 @@ namespace Presentation.MessageBoxForm
             SetButtons(buttons, MessageBoxDefaultButton.Button1);//Set [Default Button 1]
         }
 
-        private void SetButtons(MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton)
+        public LogoutMessageBox(string text, string caption, MessageBoxButtons buttons, Icons icon)
+        {
+            InitializeComponent();
+            this.labelMessage.Text = text;
+            this.labelCaption.Text = caption;
+            SetButtons(buttons, MessageBoxDefaultButton.Button1);//Set [Default Button 1]
+            SetIcon(icon);
+        }
+
+        public void SetButtons(MessageBoxButtons buttons, MessageBoxDefaultButton defaultButton)
         {
             switch (buttons)
             {
@@ -71,6 +80,37 @@ namespace Presentation.MessageBoxForm
                     break;
             }
 
+        }
+
+        private void SetIcon(Icons icon)
+        {
+            switch (icon)
+            {
+                case Icons.Error: //Error
+                    this.pictureBoxIcon.Image = Properties.Resources.error;
+                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    break;
+
+                case Icons.Chat: //Error
+                    this.pictureBoxIcon.Image = Properties.Resources.chat;
+                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    break;
+
+                case Icons.Exclamation: //Error
+                    this.pictureBoxIcon.Image = Properties.Resources.exclamation;
+                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    break;
+
+                case Icons.Information: //Error
+                    this.pictureBoxIcon.Image = Properties.Resources.information;
+                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    break;
+
+                case Icons.Question: //Error
+                    this.pictureBoxIcon.Image = Properties.Resources.question;
+                    //PrimaryColor = Color.FromArgb(224, 79, 95);
+                    break;
+            }
         }
         public void closeMessageBox()
         {

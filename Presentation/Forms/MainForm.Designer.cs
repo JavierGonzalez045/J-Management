@@ -114,7 +114,7 @@ namespace Presentation
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 10);
             this.btnLogout.Size = new System.Drawing.Size(250, 45);
             this.btnLogout.TabIndex = 9;
-            this.btnLogout.Tag = "Logout";
+            this.btnLogout.Tag = "Cerrar sesión";
             this.btnLogout.Text = "Cerrar sesión";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

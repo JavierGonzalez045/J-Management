@@ -34,7 +34,7 @@ namespace Presentation.MessageBoxForm
             this.labelCaption = new System.Windows.Forms.Label();
             this.btnCloseMessageBox = new FontAwesome.Sharp.IconPictureBox();
             this.panelBody = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxIcon = new System.Windows.Forms.PictureBox();
             this.labelMessage = new System.Windows.Forms.Label();
             this.panelButtons = new System.Windows.Forms.Panel();
             this.btnNo = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@ namespace Presentation.MessageBoxForm
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseMessageBox)).BeginInit();
             this.panelBody.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).BeginInit();
             this.panelButtons.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,22 +89,22 @@ namespace Presentation.MessageBoxForm
             // panelBody
             // 
             this.panelBody.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.panelBody.Controls.Add(this.pictureBox1);
+            this.panelBody.Controls.Add(this.pictureBoxIcon);
             this.panelBody.Controls.Add(this.labelMessage);
             this.panelBody.Location = new System.Drawing.Point(0, 40);
             this.panelBody.Name = "panelBody";
             this.panelBody.Size = new System.Drawing.Size(440, 80);
             this.panelBody.TabIndex = 2;
             // 
-            // pictureBox1
+            // pictureBoxIcon
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 38);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxIcon.Image")));
+            this.pictureBoxIcon.Location = new System.Drawing.Point(36, 13);
+            this.pictureBoxIcon.Name = "pictureBoxIcon";
+            this.pictureBoxIcon.Size = new System.Drawing.Size(39, 38);
+            this.pictureBoxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxIcon.TabIndex = 2;
+            this.pictureBoxIcon.TabStop = false;
             // 
             // labelMessage
             // 
@@ -174,7 +174,7 @@ namespace Presentation.MessageBoxForm
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseMessageBox)).EndInit();
             this.panelBody.ResumeLayout(false);
             this.panelBody.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIcon)).EndInit();
             this.panelButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -189,7 +189,7 @@ namespace Presentation.MessageBoxForm
         private System.Windows.Forms.Label labelCaption;
         private System.Windows.Forms.Label labelMessage;
         private System.Windows.Forms.Button btnNo;
-        private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button btnYes;
+        private System.Windows.Forms.PictureBox pictureBoxIcon;
     }
 }
