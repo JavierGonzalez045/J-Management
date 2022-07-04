@@ -64,6 +64,12 @@ namespace Presentation
             this.lblTitleChildForm = new System.Windows.Forms.Label();
             this.panelShadow = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.lblCorreo = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -657,6 +663,12 @@ namespace Presentation
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(17)))), ((int)(((byte)(58)))));
+            this.panelChildForm.Controls.Add(this.lblCorreo);
+            this.panelChildForm.Controls.Add(this.lblNombre);
+            this.panelChildForm.Controls.Add(this.lblCargo);
+            this.panelChildForm.Controls.Add(this.label3);
+            this.panelChildForm.Controls.Add(this.label2);
+            this.panelChildForm.Controls.Add(this.label1);
             this.panelChildForm.Controls.Add(this.pictureBox1);
             this.panelChildForm.Controls.Add(this.lblFecha);
             this.panelChildForm.Controls.Add(this.lblHora);
@@ -666,6 +678,72 @@ namespace Presentation
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1011, 903);
             this.panelChildForm.TabIndex = 2;
+            // 
+            // lblCorreo
+            // 
+            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCorreo.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblCorreo.Location = new System.Drawing.Point(160, 763);
+            this.lblCorreo.Name = "lblCorreo";
+            this.lblCorreo.Size = new System.Drawing.Size(211, 32);
+            this.lblCorreo.TabIndex = 9;
+            this.lblCorreo.Text = "Correo electrónico";
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNombre.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblNombre.Location = new System.Drawing.Point(160, 680);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(213, 32);
+            this.lblNombre.TabIndex = 8;
+            this.lblNombre.Text = "Nombre y apellido";
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCargo.ForeColor = System.Drawing.Color.SlateGray;
+            this.lblCargo.Location = new System.Drawing.Point(160, 603);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(77, 32);
+            this.lblCargo.TabIndex = 7;
+            this.lblCargo.Text = "Cargo";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label3.Location = new System.Drawing.Point(37, 766);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 28);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Correo:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label2.Location = new System.Drawing.Point(37, 683);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(114, 28);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Nombre:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label1.Location = new System.Drawing.Point(37, 603);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 28);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Cargo:";
             // 
             // pictureBox1
             // 
@@ -684,7 +762,7 @@ namespace Presentation
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(369, 463);
+            this.lblFecha.Location = new System.Drawing.Point(368, 463);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(241, 54);
             this.lblFecha.TabIndex = 2;
@@ -721,6 +799,7 @@ namespace Presentation
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelToolsSubMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
@@ -779,5 +858,11 @@ namespace Presentation
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horaFecha;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.Label lblCorreo;
+        private System.Windows.Forms.Label lblNombre;
     }
 }

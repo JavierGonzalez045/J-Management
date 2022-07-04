@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 using FontAwesome.Sharp;
 using Presentation.MessageBoxForm;
 using static Presentation.Program;
@@ -383,6 +384,18 @@ namespace Presentation
             {
                 frmCustomBox.closeMessageBox();
             }
+        }
+
+        private void loadUserData()
+        {
+            lblCargo.Text = UserLoginCache.Position;
+            lblNombre.Text = $"{UserLoginCache.FirsName} {UserLoginCache.LastName}";
+            lblCorreo.Text = UserLoginCache.Email;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            loadUserData();
         }
 
         private void horaFecha_Tick(object sender, EventArgs e)
