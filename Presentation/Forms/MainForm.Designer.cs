@@ -52,7 +52,6 @@ namespace Presentation
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new System.Windows.Forms.PictureBox();
@@ -67,6 +66,7 @@ namespace Presentation
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
+            this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelSidebar.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
@@ -487,28 +487,6 @@ namespace Presentation
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // btnMedia
-            // 
-            this.btnMedia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMedia.FlatAppearance.BorderSize = 0;
-            this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
-            this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMedia.IconSize = 32;
-            this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedia.Location = new System.Drawing.Point(0, 129);
-            this.btnMedia.Name = "btnMedia";
-            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMedia.Size = new System.Drawing.Size(250, 45);
-            this.btnMedia.TabIndex = 1;
-            this.btnMedia.Tag = "Media";
-            this.btnMedia.Text = "Media";
-            this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMedia.UseVisualStyleBackColor = true;
-            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
-            // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.btnMenu);
@@ -693,6 +671,28 @@ namespace Presentation
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
+            // btnMedia
+            // 
+            this.btnMedia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMedia.FlatAppearance.BorderSize = 0;
+            this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMedia.IconSize = 32;
+            this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedia.Location = new System.Drawing.Point(0, 129);
+            this.btnMedia.Name = "btnMedia";
+            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMedia.Size = new System.Drawing.Size(250, 45);
+            this.btnMedia.TabIndex = 1;
+            this.btnMedia.Tag = "Media";
+            this.btnMedia.Text = "Media";
+            this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMedia.UseVisualStyleBackColor = true;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -705,6 +705,7 @@ namespace Presentation
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "MainForm";
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -731,7 +732,6 @@ namespace Presentation
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelTitleBar;
-        private FontAwesome.Sharp.IconButton btnMedia;
         private System.Windows.Forms.Panel panelMediaSubMenu;
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton3;
@@ -764,5 +764,6 @@ namespace Presentation
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horaFecha;
+        private FontAwesome.Sharp.IconButton btnMedia;
     }
 }
