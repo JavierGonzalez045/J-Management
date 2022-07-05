@@ -38,7 +38,7 @@ namespace Persistence.MailServices
                 }
                 mailMessage.Subject = subject;
                 mailMessage.Body = body;
-                mailMessage.Priority = MailPriority.Normal;
+                mailMessage.Priority = MailPriority.High;
                 smtpClient.Send(mailMessage);
             }
             catch (Exception ex){ }

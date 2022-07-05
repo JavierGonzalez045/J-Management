@@ -11,7 +11,7 @@ namespace Persistence.MailServices
         public SystemSupportMail()
         {
             senderMail = "jmanagementsupp@gmail.com";
-            password = ";@#Management@!$05532:#";
+            password = "tmhnifelcxfogujh";
             host = "smtp.gmail.com";
             port = 587;
             ssl = true;
