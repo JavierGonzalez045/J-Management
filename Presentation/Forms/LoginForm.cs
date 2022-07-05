@@ -145,5 +145,11 @@ namespace Presentation
             lblErrorMessage.Visible = false;
             this.Show();
         }
+
+        private void linkRestablecerContraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var recoverPassword = new RecoverPasswordForm();
+            recoverPassword.ShowDialog();
+        }
     }
 }

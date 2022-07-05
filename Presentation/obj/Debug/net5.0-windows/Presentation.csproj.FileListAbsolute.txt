@@ -56,3 +56,4 @@ C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-win
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.Form3.resources
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\bin\Debug\net5.0-windows\FontAwesome.Sharp.dll
 C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.MessageBoxForm.CustomMessageBox.resources
+C:\Proyecto\Sistema De Inventario\J-Management\Presentation\obj\Debug\net5.0-windows\Presentation.RecoverPasswordForm.resources

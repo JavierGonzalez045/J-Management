@@ -19,5 +19,8 @@
     <Compile Update="Forms\Splashscreen\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="RecoverPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -43,6 +43,49 @@ namespace Persistence
                 }
             }
         }
+        //
+        public string recoverPassword(string userRequesting)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Users WHERE LoginName=@user or Email=@mail";
+                    command.Parameters.AddWithValue("@user", userRequesting);
+                    command.Parameters.AddWithValue("@mail", userRequesting);
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read() == true)
+                    {
+                        string userName = $"{reader.GetString(3)} {reader.GetString(4)}";
+                        string userEmail = reader.GetString(6);
+                        string accountPassword = reader.GetString(2);
+
+                        var mailService = new MailServices.SystemSupportMail();
+                        mailService.sendMail(
+                            subject: "Recuperacion de contraseña",
+                            body: $"Hola {userName}\n"+
+                            "Usted solicitó recuperar su contraseña.\n"+
+                            $"Su contraseña actual es {accountPassword}"+
+                            "\nLe recomendamos, una vez haya visualizado este mensaje, cambie la contraseña inmediatamente.",
+                            recipientMail: new List<string> { userEmail}
+                            );
+
+                        return $"Hola {userName}\n" +
+                            "Usted solicitó recuperar su contraseña.\n" +
+                            $"Por favor revise su correo {userEmail}" +
+                            "\nLe recomendamos, una vez haya iniciado sesión en el sistema, cambie la contraseña inmediatamente.";
+                    }
+                    else
+                    {
+                        return "Lo sentimos, no posee una cuenta vinculada a este nombre de usuario o correo electrónico.";
+                    }
+                }
+            }
+        }
 
         public void anyMethod()
         {
