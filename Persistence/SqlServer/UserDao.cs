@@ -48,11 +48,11 @@ namespace Persistence
         {
             if (UserCache.Position == Positions.Administrator)
             {
-
+                // Code
             }
             if (UserCache.Position == Positions.Receptionist || UserCache.Position == Positions.Accounting)
             {
-
+                // Code
             }
         }
     }
