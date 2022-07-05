@@ -136,6 +136,11 @@ namespace Presentation
             showSubMenu(panelMediaSubMenu);
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
         private void iconButton2_Click(object sender, EventArgs e)
         {
             openChildForm(new Form2());
@@ -152,11 +157,6 @@ namespace Presentation
             hideSubMenu();
         }
 
-        private void iconButton5_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
         #endregion PlaylistSubMenu
 
         #region
@@ -166,12 +166,7 @@ namespace Presentation
             showSubMenu(panelPlaylistSubMenu);
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
-
-        private void iconButton7_Click(object sender, EventArgs e)
+        private void iconButton5_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
@@ -181,7 +176,12 @@ namespace Presentation
             hideSubMenu();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
@@ -200,12 +200,8 @@ namespace Presentation
             ActivateButton(sender, RGBColors.color4);
             showSubMenu(panelToolsSubMenu);
         }
-        private void iconButton12_Click(object sender, EventArgs e)
-        {
-            hideSubMenu();
-        }
 
-        private void iconButton11_Click(object sender, EventArgs e)
+        private void iconButton9_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
@@ -215,7 +211,12 @@ namespace Presentation
             hideSubMenu();
         }
 
-        private void iconButton9_Click(object sender, EventArgs e)
+        private void iconButton11_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void iconButton12_Click(object sender, EventArgs e)
         {
             hideSubMenu();
         }
@@ -389,14 +390,14 @@ namespace Presentation
 
         private void loadUserData()
         {
-            lblCargo.Text = UserCache.Position;
-            lblNombre.Text = $"{UserCache.FirsName} {UserCache.LastName}";
-            lblCorreo.Text = UserCache.Email;
+            //lblCargo.Text = UserCache.Position;
+            //lblNombre.Text = $"{UserCache.FirsName} {UserCache.LastName}";
+            //lblCorreo.Text = UserCache.Email;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            loadUserData();
+            //loadUserData();
 
             // ADMINISTRAR PERMISOS
             if (UserCache.Position == Positions.Accounting)
@@ -408,7 +409,7 @@ namespace Presentation
 
         private void horaFecha_Tick(object sender, EventArgs e)
         {
-            lblHora.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            lblHora.Text = DateTime.Now.ToString("h:mm:ss tt");
             lblFecha.Text = DateTime.Now.ToString("ddd dd, MMMM yyyy");
         }
     }
