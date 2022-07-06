@@ -25,6 +25,7 @@ namespace Presentation.Forms.Assets
         }
 
         // Properties
+        [Category("JManagement")]
         public Color BorderColor
         {
             get
@@ -39,6 +40,7 @@ namespace Presentation.Forms.Assets
             }
         }
 
+        [Category("JManagement")]
         public int BorderSize
         {
             get
@@ -53,6 +55,7 @@ namespace Presentation.Forms.Assets
             }
         }
 
+        [Category("JManagement")]
         public bool UnderlinedStyle
         {
             get
@@ -65,6 +68,62 @@ namespace Presentation.Forms.Assets
                 underlinedStyle = value;
                 this.Invalidate();
             }
+        }
+
+        [Category("JManagement")]
+        public bool PasswordChar
+        {
+            get { return textBox1.UseSystemPasswordChar; }
+            set { textBox1.UseSystemPasswordChar = value; }
+        }
+
+        [Category("JManagement")]
+        public bool Multiline
+        {
+            get { return textBox1.Multiline; }
+            set { textBox1.Multiline = value; }
+        }
+
+        [Category("JManagement")]
+        public override Color BackColor
+        {
+            get { return base.BackColor; }
+            set
+            {
+                base.BackColor = value;
+                textBox1.BackColor = value;
+            }
+        }
+
+        [Category("JManagement")]
+        public override Color ForeColor
+        {
+            get { return base.ForeColor; }
+            set
+            {
+                base.ForeColor = value;
+                textBox1.ForeColor = value;
+            }
+        }
+
+        [Category("JManagement")]
+        public override Font Font
+        {
+            get { return base.Font; }
+            set
+            {
+                base.Font = value;
+                textBox1.Font = value;
+                if (this.DesignMode)
+                    UpdateControlHeight();
+            }
+        }
+
+        [Category("JManagement")]
+        public string Texts
+        {
+            get { return textBox1.Text; }
+            set { textBox1.Text = value; }
         }
 
         //Overridden methods
