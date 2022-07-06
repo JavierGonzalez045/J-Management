@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Presentation.Forms.Assets
 {
+    [DefaultEvent("_TextChanged")]
     public partial class JMCustomTextBox : UserControl
     {
 
@@ -17,12 +18,17 @@ namespace Presentation.Forms.Assets
         private Color borderColor = Color.MediumSlateBlue;
         private int borderSize = 2;
         private bool underlinedStyle = false;
+        private Color borderFocusColor = Color.HotPink;
+        private bool isFocused = false;
 
         // Constructor
         public JMCustomTextBox()
         {
             InitializeComponent();
         }
+
+        // Events
+        public event EventHandler _TextChanged;
 
         // Properties
         [Category("JManagement")]
@@ -126,17 +132,30 @@ namespace Presentation.Forms.Assets
             set { textBox1.Text = value; }
         }
 
+        [Category("JManagement")]
+        public Color BorderFocusColor
+        {
+            get
+            {
+                return borderFocusColor;
+            }
+
+            set
+            {
+                borderFocusColor = value;
+            }
+        }
+
         //Overridden methods
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             Graphics graph = e.Graphics;
-             
             //Draw border
             using (Pen penBorder = new Pen(borderColor, borderSize))
             {
                 penBorder.Alignment = System.Drawing.Drawing2D.PenAlignment.Inset;
-
+                if (isFocused) penBorder.Color = borderFocusColor;//Set Border color in focus. Otherwise, normal border color
                 if (underlinedStyle) //Line Style
                     graph.DrawLine(penBorder, 0, this.Height - 1, this.Width, this.Height - 1);
                 else //Normal Style
@@ -168,6 +187,44 @@ namespace Presentation.Forms.Assets
                 textBox1.Multiline = false;
                 this.Height = textBox1.Height + this.Padding.Top + this.Padding.Bottom;
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (_TextChanged != null)
+                _TextChanged.Invoke(sender, e);
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            this.OnClick(e);
+        }
+
+        private void textBox1_MouseEnter(object sender, EventArgs e)
+        {
+            this.OnMouseEnter(e);
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            this.OnMouseLeave(e);
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.OnKeyPress(e);
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            isFocused = true;
+            this.Invalidate();
+        }
+
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            isFocused = false;
+            this.Invalidate();
         }
     }
 }
