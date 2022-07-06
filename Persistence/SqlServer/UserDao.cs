@@ -11,6 +11,29 @@ namespace Persistence
 {
     public class UserDao : ConnectionToSql
     {
+
+        public void editProfile(int id, string userName, string password, string name, string lastName, string mail)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Users SET" + 
+                        "LoginName=@userName, Password=@pass, FirstName=@name, LastName=@lastName, Email=@mail WHERE UserID=@id";
+                    command.Parameters.AddWithValue("@userName", userName);
+                    command.Parameters.AddWithValue("@pass", password);
+                    command.Parameters.AddWithValue("@name", name);
+                    command.Parameters.AddWithValue("@lastName", lastName);
+                    command.Parameters.AddWithValue("@mail", mail);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
         public bool Login(string user, string pass)
         {
             using (var connection = GetConnection())
@@ -29,6 +52,8 @@ namespace Persistence
                         while (reader.Read())
                         {
                             UserCache.idUser = reader.GetInt32(0);
+                            UserCache.LoginName = reader.GetString(1);
+                            UserCache.Password = reader.GetString(2);
                             UserCache.FirsName = reader.GetString(3);
                             UserCache.LastName = reader.GetString(4);
                             UserCache.Position = reader.GetString(5);

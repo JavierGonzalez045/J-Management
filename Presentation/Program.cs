@@ -1,3 +1,4 @@
+using Presentation.Forms.UserProfile;
 using Presentation.MessageBoxForm;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,8 @@ namespace Presentation
             public static Color gainsboroColor = Color.FromArgb(220, 220, 220);
             public static Color lightBlue = Color.FromArgb(0, 113, 236);
             public static Color darkBlue = Color.FromArgb(23, 43, 77);
+            public static Color customBorderColor = Color.FromArgb(30, 140, 236);
+            public static Color customBorderColor2 = Color.FromArgb(32, 128, 119);
         }
 
         /// <summary>
@@ -39,7 +42,7 @@ namespace Presentation
             //Application.EnableVisualStyles();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new UserProfileForm());
         }
     }
 }

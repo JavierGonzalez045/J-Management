@@ -1,25 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Forms\Assets\CustomTextBox Design\JMCustomTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Forms\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Form3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\LoginForm.cs">
+    <Compile Update="Forms\Assets\CustomCirclePictureBox Design\JMCirculePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Forms\Login\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\MainForm.cs">
+    <Compile Update="Forms\Main Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\MessageBoxForm\CustomMessageBox.cs">
+    <Compile Update="Forms\Assets\MessageBoxForm\CustomMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Splashscreen\WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="RecoverPasswordForm.cs">
+    <Compile Update="Forms\UserProfile\UserProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Recover Password\RecoverPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
