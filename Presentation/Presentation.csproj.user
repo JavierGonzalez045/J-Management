@@ -4,6 +4,9 @@
     <Compile Update="Forms\Assets\CustomTextBox Design\JMCustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="Forms\Assets\CustomToggleButton Design\JMCustomToggleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Forms\Form2.cs">
       <SubType>Form</SubType>
     </Compile>

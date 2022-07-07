@@ -31,6 +31,7 @@ namespace Presentation.Forms.J_Management_Controls
         }
 
         // Properties
+        [Category("JManagement")]
         public int BorderSize
         {
             get
@@ -45,6 +46,7 @@ namespace Presentation.Forms.J_Management_Controls
             }
         }
 
+        [Category("JManagement")]
         public Color BorderColor
         {
             get
@@ -59,6 +61,7 @@ namespace Presentation.Forms.J_Management_Controls
             }
         }
 
+        [Category("JManagement")]
         public Color BorderColor2
         {
             get
@@ -73,6 +76,7 @@ namespace Presentation.Forms.J_Management_Controls
             }
         }
 
+        [Category("JManagement")]
         public DashStyle BoderLineStyle
         {
             get
@@ -87,6 +91,7 @@ namespace Presentation.Forms.J_Management_Controls
             }
         }
 
+        [Category("JManagement")]
         public DashCap BorderCapStyle
         {
             get
@@ -101,6 +106,7 @@ namespace Presentation.Forms.J_Management_Controls
             }
         }
 
+        [Category("JManagement")]
         public float GradientAngle
         {
             get
