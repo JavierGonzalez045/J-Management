@@ -32,6 +32,9 @@ namespace Presentation
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
+            this.lblEstadoOpacidad = new System.Windows.Forms.Label();
+            this.tbOpacidad = new Presentation.Forms.Assets.CustomToggleButton.JMCustomToggleButton();
+            this.lblOpacidad = new System.Windows.Forms.Label();
             this.btnLogout = new FontAwesome.Sharp.IconButton();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.panelToolsSubMenu = new System.Windows.Forms.Panel();
@@ -85,6 +88,9 @@ namespace Presentation
             // 
             this.panelSidebar.AutoScroll = true;
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(35)))));
+            this.panelSidebar.Controls.Add(this.lblEstadoOpacidad);
+            this.panelSidebar.Controls.Add(this.tbOpacidad);
+            this.panelSidebar.Controls.Add(this.lblOpacidad);
             this.panelSidebar.Controls.Add(this.btnLogout);
             this.panelSidebar.Controls.Add(this.btnHelp);
             this.panelSidebar.Controls.Add(this.panelToolsSubMenu);
@@ -98,8 +104,43 @@ namespace Presentation
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(250, 976);
+            this.panelSidebar.Size = new System.Drawing.Size(250, 1061);
             this.panelSidebar.TabIndex = 0;
+            // 
+            // lblEstadoOpacidad
+            // 
+            this.lblEstadoOpacidad.AutoSize = true;
+            this.lblEstadoOpacidad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblEstadoOpacidad.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblEstadoOpacidad.Location = new System.Drawing.Point(160, 898);
+            this.lblEstadoOpacidad.Name = "lblEstadoOpacidad";
+            this.lblEstadoOpacidad.Size = new System.Drawing.Size(57, 19);
+            this.lblEstadoOpacidad.TabIndex = 12;
+            this.lblEstadoOpacidad.Text = "Activar";
+            // 
+            // tbOpacidad
+            // 
+            this.tbOpacidad.Location = new System.Drawing.Point(92, 897);
+            this.tbOpacidad.MinimumSize = new System.Drawing.Size(45, 22);
+            this.tbOpacidad.Name = "tbOpacidad";
+            this.tbOpacidad.OffBackColor = System.Drawing.Color.Gray;
+            this.tbOpacidad.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.tbOpacidad.OnBackColor = System.Drawing.Color.DodgerBlue;
+            this.tbOpacidad.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.tbOpacidad.Size = new System.Drawing.Size(62, 24);
+            this.tbOpacidad.TabIndex = 11;
+            this.tbOpacidad.UseVisualStyleBackColor = true;
+            this.tbOpacidad.CheckedChanged += new System.EventHandler(this.tbOpacidad_CheckedChanged);
+            // 
+            // lblOpacidad
+            // 
+            this.lblOpacidad.AutoSize = true;
+            this.lblOpacidad.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblOpacidad.Location = new System.Drawing.Point(12, 898);
+            this.lblOpacidad.Name = "lblOpacidad";
+            this.lblOpacidad.Size = new System.Drawing.Size(74, 19);
+            this.lblOpacidad.TabIndex = 10;
+            this.lblOpacidad.Text = "Opacidad: ";
             // 
             // btnLogout
             // 
@@ -113,7 +154,7 @@ namespace Presentation
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.IconSize = 30;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 931);
+            this.btnLogout.Location = new System.Drawing.Point(0, 1016);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 10);
             this.btnLogout.Size = new System.Drawing.Size(250, 45);
@@ -661,7 +702,7 @@ namespace Presentation
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 76);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1219, 900);
+            this.panelChildForm.Size = new System.Drawing.Size(1219, 985);
             this.panelChildForm.TabIndex = 2;
             // 
             // lblFecha
@@ -670,7 +711,7 @@ namespace Presentation
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(376, 427);
+            this.lblFecha.Location = new System.Drawing.Point(376, 469);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(323, 72);
             this.lblFecha.TabIndex = 2;
@@ -682,7 +723,7 @@ namespace Presentation
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHora.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblHora.Location = new System.Drawing.Point(319, 262);
+            this.lblHora.Location = new System.Drawing.Point(319, 304);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(599, 142);
             this.lblHora.TabIndex = 1;
@@ -698,19 +739,19 @@ namespace Presentation
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1469, 976);
+            this.ClientSize = new System.Drawing.Size(1469, 1061);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSidebar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(1485, 1015);
             this.Name = "MainForm";
-            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelSidebar.ResumeLayout(false);
+            this.panelSidebar.PerformLayout();
             this.panelToolsSubMenu.ResumeLayout(false);
             this.panelPlaylistSubMenu.ResumeLayout(false);
             this.panelMediaSubMenu.ResumeLayout(false);
@@ -766,5 +807,8 @@ namespace Presentation
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer horaFecha;
         private FontAwesome.Sharp.IconButton btnMedia;
+        private System.Windows.Forms.Label lblOpacidad;
+        private Forms.Assets.CustomToggleButton.JMCustomToggleButton tbOpacidad;
+        private System.Windows.Forms.Label lblEstadoOpacidad;
     }
 }

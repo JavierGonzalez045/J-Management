@@ -341,6 +341,9 @@ namespace Presentation
             {
                 panelSidebar.Width = 100;
                 btnInicio.Visible = false;
+                lblOpacidad.Visible = false;
+                lblEstadoOpacidad.Visible = false;
+                tbOpacidad.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 this.panelLogo.Padding = new Padding(0,20,0,0);
                 foreach (Button menuButton in panelSidebar.Controls.OfType<Button>())
@@ -355,6 +358,9 @@ namespace Presentation
                 panelSidebar.Width = 250;
                 btnInicio.Visible = true;
                 btnMenu.Dock = DockStyle.None;
+                lblOpacidad.Visible = true;
+                lblEstadoOpacidad.Visible = true;
+                tbOpacidad.Visible = true;
                 foreach (Button menuButton in panelSidebar.Controls.OfType<Button>())
                 {
                     menuButton.Text = menuButton.Tag.ToString();
@@ -413,6 +419,22 @@ namespace Presentation
         {
             lblHora.Text = DateTime.Now.ToString("h:mm:ss tt");
             lblFecha.Text = DateTime.Now.ToString("ddd dd, MMMM yyyy");
+        }
+
+        private void tbOpacidad_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tbOpacidad.Checked)
+            {
+                this.Opacity = 0.9D;
+                lblEstadoOpacidad.Text = "Desactivar";
+                lblEstadoOpacidad.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+            else
+            {
+                this.Opacity = 1.0D;
+                lblEstadoOpacidad.Text = "Activar";
+                lblEstadoOpacidad.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
         }
     }
 }
