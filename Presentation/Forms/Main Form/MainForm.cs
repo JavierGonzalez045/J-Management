@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Common.Cache;
 using Domain;
 using FontAwesome.Sharp;
+using Presentation.Forms.UserProfile;
 using Presentation.MessageBoxForm;
 using static Presentation.Program;
 
@@ -227,6 +228,7 @@ namespace Presentation
         private void btnHelp_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color5);
+            openChildForm(new UserProfileForm());
         }
 
 

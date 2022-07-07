@@ -20,7 +20,7 @@ namespace Persistence
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "UPDATE Users SET" + 
+                    command.CommandText = "UPDATE Users SET " + 
                         "LoginName=@userName, Password=@pass, FirstName=@name, LastName=@lastName, Email=@mail WHERE UserID=@id";
                     command.Parameters.AddWithValue("@userName", userName);
                     command.Parameters.AddWithValue("@pass", password);

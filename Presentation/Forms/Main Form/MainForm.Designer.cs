@@ -52,6 +52,7 @@ namespace Presentation
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new System.Windows.Forms.PictureBox();
@@ -66,7 +67,6 @@ namespace Presentation
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.horaFecha = new System.Windows.Forms.Timer(this.components);
-            this.btnMedia = new FontAwesome.Sharp.IconButton();
             this.panelSidebar.SuspendLayout();
             this.panelToolsSubMenu.SuspendLayout();
             this.panelPlaylistSubMenu.SuspendLayout();
@@ -98,7 +98,7 @@ namespace Presentation
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(250, 979);
+            this.panelSidebar.Size = new System.Drawing.Size(250, 976);
             this.panelSidebar.TabIndex = 0;
             // 
             // btnLogout
@@ -113,7 +113,7 @@ namespace Presentation
             this.btnLogout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogout.IconSize = 30;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(0, 934);
+            this.btnLogout.Location = new System.Drawing.Point(0, 931);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Padding = new System.Windows.Forms.Padding(10, 0, 20, 10);
             this.btnLogout.Size = new System.Drawing.Size(250, 45);
@@ -487,6 +487,28 @@ namespace Presentation
             this.iconButton1.UseVisualStyleBackColor = true;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
+            // btnMedia
+            // 
+            this.btnMedia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMedia.FlatAppearance.BorderSize = 0;
+            this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
+            this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
+            this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMedia.IconSize = 32;
+            this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMedia.Location = new System.Drawing.Point(0, 129);
+            this.btnMedia.Name = "btnMedia";
+            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnMedia.Size = new System.Drawing.Size(250, 45);
+            this.btnMedia.TabIndex = 1;
+            this.btnMedia.Tag = "Media";
+            this.btnMedia.Text = "Media";
+            this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMedia.UseVisualStyleBackColor = true;
+            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
+            // 
             // panelLogo
             // 
             this.panelLogo.Controls.Add(this.btnMenu);
@@ -535,7 +557,7 @@ namespace Presentation
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(250, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1011, 76);
+            this.panelTitleBar.Size = new System.Drawing.Size(1219, 76);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -549,7 +571,7 @@ namespace Presentation
             this.btnMinimize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(188)))), ((int)(((byte)(64)))));
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimize.IconSize = 28;
-            this.btnMinimize.Location = new System.Drawing.Point(904, 11);
+            this.btnMinimize.Location = new System.Drawing.Point(1112, 11);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(28, 29);
             this.btnMinimize.TabIndex = 4;
@@ -568,7 +590,7 @@ namespace Presentation
             this.btnMaximize.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(200)))), ((int)(((byte)(75)))));
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximize.IconSize = 28;
-            this.btnMaximize.Location = new System.Drawing.Point(940, 11);
+            this.btnMaximize.Location = new System.Drawing.Point(1148, 11);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(28, 29);
             this.btnMaximize.TabIndex = 3;
@@ -587,7 +609,7 @@ namespace Presentation
             this.btnClose.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(87)))), ((int)(((byte)(83)))));
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 29;
-            this.btnClose.Location = new System.Drawing.Point(974, 11);
+            this.btnClose.Location = new System.Drawing.Point(1182, 11);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(29, 29);
             this.btnClose.TabIndex = 2;
@@ -627,7 +649,7 @@ namespace Presentation
             this.panelShadow.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelShadow.Location = new System.Drawing.Point(0, 0);
             this.panelShadow.Name = "panelShadow";
-            this.panelShadow.Size = new System.Drawing.Size(1011, 9);
+            this.panelShadow.Size = new System.Drawing.Size(1219, 9);
             this.panelShadow.TabIndex = 0;
             // 
             // panelChildForm
@@ -639,7 +661,7 @@ namespace Presentation
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 76);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1011, 903);
+            this.panelChildForm.Size = new System.Drawing.Size(1219, 900);
             this.panelChildForm.TabIndex = 2;
             // 
             // lblFecha
@@ -648,7 +670,7 @@ namespace Presentation
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblFecha.ForeColor = System.Drawing.Color.SlateGray;
-            this.lblFecha.Location = new System.Drawing.Point(272, 428);
+            this.lblFecha.Location = new System.Drawing.Point(376, 427);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(323, 72);
             this.lblFecha.TabIndex = 2;
@@ -660,7 +682,7 @@ namespace Presentation
             this.lblHora.AutoSize = true;
             this.lblHora.Font = new System.Drawing.Font("Segoe UI", 80F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblHora.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lblHora.Location = new System.Drawing.Point(215, 263);
+            this.lblHora.Location = new System.Drawing.Point(319, 262);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(599, 142);
             this.lblHora.TabIndex = 1;
@@ -671,43 +693,22 @@ namespace Presentation
             this.horaFecha.Enabled = true;
             this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
-            // btnMedia
-            // 
-            this.btnMedia.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMedia.FlatAppearance.BorderSize = 0;
-            this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
-            this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
-            this.btnMedia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMedia.IconSize = 32;
-            this.btnMedia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMedia.Location = new System.Drawing.Point(0, 129);
-            this.btnMedia.Name = "btnMedia";
-            this.btnMedia.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnMedia.Size = new System.Drawing.Size(250, 45);
-            this.btnMedia.TabIndex = 1;
-            this.btnMedia.Tag = "Media";
-            this.btnMedia.Text = "Media";
-            this.btnMedia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMedia.UseVisualStyleBackColor = true;
-            this.btnMedia.Click += new System.EventHandler(this.btnMedia_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1261, 979);
+            this.ClientSize = new System.Drawing.Size(1469, 976);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelSidebar);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.MinimumSize = new System.Drawing.Size(950, 600);
+            this.MinimumSize = new System.Drawing.Size(1485, 1015);
             this.Name = "MainForm";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelToolsSubMenu.ResumeLayout(false);

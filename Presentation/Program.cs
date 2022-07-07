@@ -42,7 +42,7 @@ namespace Presentation
             //Application.EnableVisualStyles();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserProfileForm());
+            Application.Run(new LoginForm());
         }
     }
 }
