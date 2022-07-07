@@ -249,8 +249,15 @@ namespace Presentation
         }
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            currentChildForm.Close();
-            Reset();
+            if (currentChildForm == null)
+            {
+                Reset();
+            }
+            else
+            {
+                currentChildForm.Close();
+                Reset();
+            }
         }
 
         private void Reset()

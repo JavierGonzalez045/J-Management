@@ -581,7 +581,7 @@ namespace Presentation
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.Location = new System.Drawing.Point(3, 0);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(162, 85);
+            this.btnInicio.Size = new System.Drawing.Size(151, 108);
             this.btnInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInicio.TabIndex = 0;
             this.btnInicio.TabStop = false;
