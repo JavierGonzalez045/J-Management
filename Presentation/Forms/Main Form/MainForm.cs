@@ -70,7 +70,7 @@ namespace Presentation
         {
             if (tbSwitchTheme.Checked)
             {
-                ActivateButton(sender, RGBColors.lightBlue);
+                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
             }
             else
             {
@@ -215,7 +215,14 @@ namespace Presentation
         #region MediaSubMenu
         private void btnMedia_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.anotherShadeOfBlue);
+            if (tbSwitchTheme.Checked)
+            {
+                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
+            }
+            else
+            {
+                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
+            }
             showSubMenu(panelMediaSubMenu);
         }
 
@@ -523,7 +530,7 @@ namespace Presentation
             lblHora.Text = DateTime.Now.ToString("h:mm:ss tt");
             lblFecha.Text = DateTime.Now.ToString("ddd dd, MMMM yyyy");
         }
-
+         
         private void tbOpacidad_CheckedChanged(object sender, EventArgs e)
         {
             if (tbOpacidad.Checked)
@@ -595,6 +602,7 @@ namespace Presentation
                 panelSidebar.BackColor = RGBColors.panelSidebarLight;
                 iconMoon.ForeColor = Color.White;
                 iconSun.ForeColor = Color.DimGray;
+                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
 
                 SetTheme();
 
@@ -603,7 +611,6 @@ namespace Presentation
                 tbOpacidad.OffBackColor = Color.DimGray;
                 tbOpacidad.OnBackColor = Color.Navy;
                 btnLogout.ForeColor = Color.Gainsboro;
-                btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             }
             else
             {
