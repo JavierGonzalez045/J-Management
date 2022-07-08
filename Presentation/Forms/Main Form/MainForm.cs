@@ -215,14 +215,7 @@ namespace Presentation
         #region MediaSubMenu
         private void btnMedia_Click(object sender, EventArgs e)
         {
-            if (tbSwitchTheme.Checked)
-            {
-                ActivateButton(sender, RGBColors.lightBlue);
-            }
-            else
-            {
-                ActivateButton(sender, RGBColors.activeDarkBlue);
-            }
+            ActivateButton(sender, RGBColors.anotherShadeOfBlue);
             showSubMenu(panelMediaSubMenu);
         }
 
@@ -589,11 +582,12 @@ namespace Presentation
         {
             if (tbSwitchTheme.Checked)
             {
+                iconCurrentChildForm.IconChar = IconChar.Home;
+                iconCurrentChildForm.BackColor = RGBColors.lightGray;
+                iconCurrentChildForm.ForeColor = Color.SlateGray;
                 panelMediaSubMenu.BackColor = Color.Gainsboro;
                 panelPlaylistSubMenu.BackColor = Color.Gainsboro;
                 panelToolsSubMenu.BackColor = Color.Gainsboro;
-                iconCurrentChildForm.BackColor = RGBColors.lightGray;
-                iconCurrentChildForm.ForeColor = Color.SlateGray;
                 panelTitleBar.BackColor = RGBColors.lightGray;
                 panelShadow.BackColor = RGBColors.panelShadowLight;
                 panelChildForm.BackColor = RGBColors.panelChildFormLight;
@@ -617,6 +611,7 @@ namespace Presentation
                 panelPlaylistSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 panelToolsSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 iconCurrentChildForm.BackColor = RGBColors.darkBlue;
+                iconCurrentChildForm.IconChar = IconChar.Home;
                 panelTitleBar.BackColor = RGBColors.darkBlue;
                 panelShadow.BackColor = RGBColors.panelShadowDark;
                 panelChildForm.BackColor = RGBColors.panelChildFormDark;
