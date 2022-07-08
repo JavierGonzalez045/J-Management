@@ -74,7 +74,7 @@ namespace Presentation
             }
             else
             {
-                ActivateButton(sender, RGBColors.activeDarkBlue);
+                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
             }
         }
 
@@ -406,37 +406,37 @@ namespace Presentation
 
         private void btnClose_MouseHover(object sender, EventArgs e)
         {
-            btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
+            btnClose.IconChar = IconChar.XmarkCircle;
             btnClose.ForeColor = RGBColors.darkRed;
         }
 
         private void btnClose_MouseLeave(object sender, EventArgs e)
         {
-            btnClose.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnClose.IconChar = IconChar.Circle;
             btnClose.ForeColor = RGBColors.lightRed;
         }
 
         private void btnMaximize_MouseHover(object sender, EventArgs e)
         {
-            btnMaximize.IconChar = FontAwesome.Sharp.IconChar.CircleChevronUp;
+            btnMaximize.IconChar = IconChar.CircleChevronUp;
             btnMaximize.ForeColor = RGBColors.darkGreen;
         }
 
         private void btnMaximize_MouseLeave(object sender, EventArgs e)
         {
-            btnMaximize.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMaximize.IconChar = IconChar.Circle;
             btnMaximize.ForeColor = RGBColors.lightGreen;
         }
 
         private void btnMinimize_MouseHover(object sender, EventArgs e)
         {
-            btnMinimize.IconChar = FontAwesome.Sharp.IconChar.CircleMinus;
+            btnMinimize.IconChar = IconChar.CircleMinus;
             btnMinimize.ForeColor = RGBColors.darkYellow;
         }
 
         private void btnMinimize_MouseLeave(object sender, EventArgs e)
         {
-            btnMinimize.IconChar = FontAwesome.Sharp.IconChar.Circle;
+            btnMinimize.IconChar = IconChar.Circle;
             btnMinimize.ForeColor = RGBColors.lightYellow;
         }
 
@@ -547,10 +547,14 @@ namespace Presentation
             }
         }
 
+
         public void SetTheme()
         {
+
             #region btnMedia
+
             setThemeButtons(btnMedia);
+
 
             setIconButtonStyle(iconButton1);
             setIconButtonStyle(iconButton2);
@@ -559,7 +563,8 @@ namespace Presentation
             #endregion
 
             #region btnPlaylist
-            setThemeButtons(btnPlaylist);
+
+            //setThemeButtons(btnPlaylist);
 
             setIconButtonStyle(iconButton5);
             setIconButtonStyle(iconButton6);
@@ -568,12 +573,11 @@ namespace Presentation
             #endregion
 
             // btnEqualizer
-
-            setThemeButtons(btnEqualizer);
+            //setThemeButtons(btnEqualizer);
 
 
             #region btnTools
-            setThemeButtons(btnTools);
+            //setThemeButtons(btnTools);
 
             setIconButtonStyle(iconButton9);
             setIconButtonStyle(iconButton10);
@@ -582,13 +586,14 @@ namespace Presentation
             #endregion
 
             // btnHelp
-            setThemeButtons(btnHelp);
+            //setThemeButtons(btnHelp);
         }
 
         private void tbSwitchTheme_CheckedChanged(object sender, EventArgs e)
         {
             if (tbSwitchTheme.Checked)
             {
+                #region iconsInWhiteTheme
                 iconCurrentChildForm.IconChar = IconChar.Home;
                 iconCurrentChildForm.BackColor = RGBColors.lightGray;
                 iconCurrentChildForm.ForeColor = Color.SlateGray;
@@ -602,18 +607,21 @@ namespace Presentation
                 panelSidebar.BackColor = RGBColors.panelSidebarLight;
                 iconMoon.ForeColor = Color.White;
                 iconSun.ForeColor = Color.DimGray;
-                ActivateButton(sender, RGBColors.anotherShadeOfBlue);
+                #endregion
 
                 SetTheme();
 
+                #region opacityControlsInWhiteTheme
                 // Opacity controls
                 setLabelStyle(lblOpacidad);
                 tbOpacidad.OffBackColor = Color.DimGray;
                 tbOpacidad.OnBackColor = Color.Navy;
                 btnLogout.ForeColor = Color.Gainsboro;
+                #endregion
             }
             else
             {
+                #region iconsInDarkTheme
                 panelMediaSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 panelPlaylistSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 panelToolsSubMenu.BackColor = RGBColors.panelSubMenusDark;
@@ -626,15 +634,18 @@ namespace Presentation
                 panelSidebar.BackColor = RGBColors.panelSidebarDark;
                 iconMoon.ForeColor = Color.DeepSkyBlue;
                 iconSun.ForeColor = Color.White;
+                #endregion
 
                 SetTheme();
 
+                #region opacityControlsInDarkTheme
                 // Opacity controls
                 setLabelStyle(lblOpacidad);
                 tbOpacidad.OffBackColor = Color.DimGray;
                 tbOpacidad.OnBackColor = Color.DodgerBlue;
                 btnLogout.ForeColor = Color.Gainsboro;
                 btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+                #endregion
             }
         }
     }
