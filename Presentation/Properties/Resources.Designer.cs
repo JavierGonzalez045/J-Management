@@ -73,6 +73,16 @@ namespace Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_picture {
+            get {
+                object obj = ResourceManager.GetObject("default-picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap error {
             get {
                 object obj = ResourceManager.GetObject("error", resourceCulture);
@@ -96,6 +106,46 @@ namespace Presentation.Properties {
         internal static System.Drawing.Bitmap information {
             get {
                 object obj = ResourceManager.GetObject("information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J_MANAGEMENT_BLACK_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("J-MANAGEMENT-BLACK-LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J_MANAGEMENT_LIGHT_BLUE_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("J-MANAGEMENT-LIGHT-BLUE-LOGO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J_MANAGEMENT_LIGHT_BLUE_LOGO_WITHOUT_LABEL {
+            get {
+                object obj = ResourceManager.GetObject("J-MANAGEMENT-LIGHT-BLUE-LOGO-WITHOUT-LABEL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap J_MANAGEMENT_WHITE_LOGO {
+            get {
+                object obj = ResourceManager.GetObject("J-MANAGEMENT-WHITE-LOGO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

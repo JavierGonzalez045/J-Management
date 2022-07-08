@@ -30,7 +30,6 @@ namespace Presentation
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.lblEstadoOpacidad = new System.Windows.Forms.Label();
             this.tbOpacidad = new Presentation.Forms.Assets.CustomToggleButton.JMCustomToggleButton();
@@ -60,6 +59,9 @@ namespace Presentation
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new System.Windows.Forms.PictureBox();
             this.panelTitleBar = new System.Windows.Forms.Panel();
+            this.iconSun = new FontAwesome.Sharp.IconPictureBox();
+            this.iconMoon = new FontAwesome.Sharp.IconPictureBox();
+            this.tbSwitchTheme = new Presentation.Forms.Assets.CustomToggleButton.JMCustomToggleButton();
             this.btnMinimize = new FontAwesome.Sharp.IconPictureBox();
             this.btnMaximize = new FontAwesome.Sharp.IconPictureBox();
             this.btnClose = new FontAwesome.Sharp.IconPictureBox();
@@ -77,6 +79,8 @@ namespace Presentation
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).BeginInit();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMoon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -120,7 +124,8 @@ namespace Presentation
             // 
             // tbOpacidad
             // 
-            this.tbOpacidad.Location = new System.Drawing.Point(92, 897);
+            this.tbOpacidad.ForeColor = System.Drawing.Color.Black;
+            this.tbOpacidad.Location = new System.Drawing.Point(92, 896);
             this.tbOpacidad.MinimumSize = new System.Drawing.Size(45, 22);
             this.tbOpacidad.Name = "tbOpacidad";
             this.tbOpacidad.OffBackColor = System.Drawing.Color.Gray;
@@ -135,10 +140,11 @@ namespace Presentation
             // lblOpacidad
             // 
             this.lblOpacidad.AutoSize = true;
+            this.lblOpacidad.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblOpacidad.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblOpacidad.Location = new System.Drawing.Point(12, 898);
             this.lblOpacidad.Name = "lblOpacidad";
-            this.lblOpacidad.Size = new System.Drawing.Size(74, 19);
+            this.lblOpacidad.Size = new System.Drawing.Size(82, 19);
             this.lblOpacidad.TabIndex = 10;
             this.lblOpacidad.Text = "Opacidad: ";
             // 
@@ -147,7 +153,7 @@ namespace Presentation
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnLogout.IconChar = FontAwesome.Sharp.IconChar.RightFromBracket;
             this.btnLogout.IconColor = System.Drawing.Color.Gainsboro;
@@ -173,6 +179,7 @@ namespace Presentation
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnHelp.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.btnHelp.IconColor = System.Drawing.Color.Gainsboro;
@@ -209,6 +216,7 @@ namespace Presentation
             this.iconButton12.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton12.FlatAppearance.BorderSize = 0;
             this.iconButton12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton12.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton12.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton12.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton12.IconColor = System.Drawing.Color.Black;
@@ -228,6 +236,7 @@ namespace Presentation
             this.iconButton11.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton11.FlatAppearance.BorderSize = 0;
             this.iconButton11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton11.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton11.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton11.IconColor = System.Drawing.Color.Black;
@@ -247,6 +256,7 @@ namespace Presentation
             this.iconButton10.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton10.FlatAppearance.BorderSize = 0;
             this.iconButton10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton10.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton10.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton10.IconColor = System.Drawing.Color.Black;
@@ -266,6 +276,7 @@ namespace Presentation
             this.iconButton9.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton9.FlatAppearance.BorderSize = 0;
             this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton9.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton9.IconColor = System.Drawing.Color.Black;
@@ -285,6 +296,7 @@ namespace Presentation
             this.btnTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTools.FlatAppearance.BorderSize = 0;
             this.btnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTools.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnTools.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnTools.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.btnTools.IconColor = System.Drawing.Color.Gainsboro;
@@ -308,6 +320,7 @@ namespace Presentation
             this.btnEqualizer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnEqualizer.FlatAppearance.BorderSize = 0;
             this.btnEqualizer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEqualizer.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnEqualizer.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnEqualizer.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.btnEqualizer.IconColor = System.Drawing.Color.Gainsboro;
@@ -344,6 +357,7 @@ namespace Presentation
             this.iconButton8.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton8.FlatAppearance.BorderSize = 0;
             this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton8.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton8.IconColor = System.Drawing.Color.Black;
@@ -363,6 +377,7 @@ namespace Presentation
             this.iconButton7.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton7.FlatAppearance.BorderSize = 0;
             this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton7.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton7.IconColor = System.Drawing.Color.Black;
@@ -382,6 +397,7 @@ namespace Presentation
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton6.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton6.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton6.IconColor = System.Drawing.Color.Black;
@@ -401,6 +417,7 @@ namespace Presentation
             this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton5.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton5.IconColor = System.Drawing.Color.Black;
@@ -420,6 +437,7 @@ namespace Presentation
             this.btnPlaylist.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlaylist.FlatAppearance.BorderSize = 0;
             this.btnPlaylist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylist.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnPlaylist.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPlaylist.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.btnPlaylist.IconColor = System.Drawing.Color.Gainsboro;
@@ -456,6 +474,7 @@ namespace Presentation
             this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton4.FlatAppearance.BorderSize = 0;
             this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton4.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton4.IconColor = System.Drawing.Color.Black;
@@ -475,6 +494,7 @@ namespace Presentation
             this.iconButton3.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton3.FlatAppearance.BorderSize = 0;
             this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton3.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton3.IconColor = System.Drawing.Color.Black;
@@ -494,6 +514,7 @@ namespace Presentation
             this.iconButton2.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton2.FlatAppearance.BorderSize = 0;
             this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton2.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton2.IconColor = System.Drawing.Color.Black;
@@ -513,7 +534,7 @@ namespace Presentation
             this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton1.FlatAppearance.BorderSize = 0;
             this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.iconButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.iconButton1.ForeColor = System.Drawing.Color.LightGray;
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
@@ -533,6 +554,7 @@ namespace Presentation
             this.btnMedia.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMedia.FlatAppearance.BorderSize = 0;
             this.btnMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedia.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnMedia.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnMedia.IconChar = FontAwesome.Sharp.IconChar.Cube;
             this.btnMedia.IconColor = System.Drawing.Color.Gainsboro;
@@ -578,7 +600,7 @@ namespace Presentation
             // 
             // btnInicio
             // 
-            this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
+            this.btnInicio.Image = global::Presentation.Properties.Resources.J_MANAGEMENT_LIGHT_BLUE_LOGO;
             this.btnInicio.Location = new System.Drawing.Point(3, 0);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(151, 108);
@@ -590,6 +612,9 @@ namespace Presentation
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.panelTitleBar.Controls.Add(this.iconSun);
+            this.panelTitleBar.Controls.Add(this.iconMoon);
+            this.panelTitleBar.Controls.Add(this.tbSwitchTheme);
             this.panelTitleBar.Controls.Add(this.btnMinimize);
             this.panelTitleBar.Controls.Add(this.btnMaximize);
             this.panelTitleBar.Controls.Add(this.btnClose);
@@ -601,6 +626,48 @@ namespace Presentation
             this.panelTitleBar.Size = new System.Drawing.Size(1219, 76);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
+            // 
+            // iconSun
+            // 
+            this.iconSun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.iconSun.ForeColor = System.Drawing.Color.Gainsboro;
+            this.iconSun.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.iconSun.IconColor = System.Drawing.Color.Gainsboro;
+            this.iconSun.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconSun.IconSize = 27;
+            this.iconSun.Location = new System.Drawing.Point(272, 24);
+            this.iconSun.Name = "iconSun";
+            this.iconSun.Size = new System.Drawing.Size(28, 27);
+            this.iconSun.TabIndex = 7;
+            this.iconSun.TabStop = false;
+            // 
+            // iconMoon
+            // 
+            this.iconMoon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(43)))), ((int)(((byte)(77)))));
+            this.iconMoon.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconMoon.IconChar = FontAwesome.Sharp.IconChar.Moon;
+            this.iconMoon.IconColor = System.Drawing.Color.DeepSkyBlue;
+            this.iconMoon.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.iconMoon.IconSize = 27;
+            this.iconMoon.Location = new System.Drawing.Point(174, 24);
+            this.iconMoon.Name = "iconMoon";
+            this.iconMoon.Size = new System.Drawing.Size(28, 27);
+            this.iconMoon.TabIndex = 6;
+            this.iconMoon.TabStop = false;
+            // 
+            // tbSwitchTheme
+            // 
+            this.tbSwitchTheme.Location = new System.Drawing.Point(207, 25);
+            this.tbSwitchTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.tbSwitchTheme.Name = "tbSwitchTheme";
+            this.tbSwitchTheme.OffBackColor = System.Drawing.Color.Gray;
+            this.tbSwitchTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.tbSwitchTheme.OnBackColor = System.Drawing.Color.Black;
+            this.tbSwitchTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.tbSwitchTheme.Size = new System.Drawing.Size(62, 24);
+            this.tbSwitchTheme.TabIndex = 5;
+            this.tbSwitchTheme.UseVisualStyleBackColor = true;
+            this.tbSwitchTheme.CheckedChanged += new System.EventHandler(this.tbSwitchTheme_CheckedChanged);
             // 
             // btnMinimize
             // 
@@ -676,11 +743,11 @@ namespace Presentation
             // lblTitleChildForm
             // 
             this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.Gainsboro;
             this.lblTitleChildForm.Location = new System.Drawing.Point(68, 24);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(67, 25);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(69, 26);
             this.lblTitleChildForm.TabIndex = 1;
             this.lblTitleChildForm.Text = "Inicio";
             // 
@@ -759,6 +826,8 @@ namespace Presentation
             ((System.ComponentModel.ISupportInitialize)(this.btnInicio)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconMoon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
@@ -810,5 +879,8 @@ namespace Presentation
         private System.Windows.Forms.Label lblOpacidad;
         private Forms.Assets.CustomToggleButton.JMCustomToggleButton tbOpacidad;
         private System.Windows.Forms.Label lblEstadoOpacidad;
+        private Forms.Assets.CustomToggleButton.JMCustomToggleButton tbSwitchTheme;
+        private FontAwesome.Sharp.IconPictureBox iconMoon;
+        private FontAwesome.Sharp.IconPictureBox iconSun;
     }
 }

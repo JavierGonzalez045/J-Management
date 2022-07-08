@@ -26,6 +26,58 @@ namespace Presentation
         private Panel leftBorderBtn;
         private Form currentChildForm;
 
+        public void setButtonStyle(Button button)
+        {
+            button.ForeColor = Color.Gainsboro;
+            if (tbSwitchTheme.Checked)
+            {
+                button.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+            else
+            {
+                button.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+        }
+
+        public void setLabelStyle(Label label)
+        {
+            label.ForeColor = Color.Gainsboro;
+            if (tbSwitchTheme.Checked)
+            {
+                label.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+            else
+            {
+                label.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+        }
+
+        public void setIconButtonStyle(IconButton iconButton)
+        {
+            if (tbSwitchTheme.Checked)
+            {
+                iconButton.ForeColor = RGBColors.deepSkyBlue;
+                iconButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+            else
+            {
+                iconButton.ForeColor = Color.LightGray;
+                iconButton.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+        }
+
+        public void setThemeButtons(object sender)
+        {
+            if (tbSwitchTheme.Checked)
+            {
+                ActivateButton(sender, RGBColors.lightBlue);
+            }
+            else
+            {
+                ActivateButton(sender, RGBColors.activeDarkBlue);
+            }
+        }
+
         // Constructor
         public MainForm()
         {
@@ -44,38 +96,68 @@ namespace Presentation
         // Methods
         private void ActivateButton(object senderBtn, Color color)
         {
-            DisableButton();
             if (senderBtn != null)
             {
-                // Button
-                currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                currentBtn.ForeColor = color;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
-                //currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                //currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //Left border button
-                leftBorderBtn.BackColor = color;
-                leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                leftBorderBtn.Visible = true;
-                leftBorderBtn.BringToFront();
-                //Current Child Form Icon
-                iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                iconCurrentChildForm.IconColor = color;
+                if (tbSwitchTheme.Checked)
+                {
+                    // Button
+                    currentBtn = (IconButton)senderBtn;
+                    currentBtn.BackColor = Color.FromArgb(11, 170, 247);
+                    currentBtn.ForeColor = color;
+                    currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                    currentBtn.IconColor = color;
+                    //Left border button
+                    leftBorderBtn.BackColor = color;
+                    leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                    leftBorderBtn.Visible = true;
+                    leftBorderBtn.BringToFront();
+                    //Current Child Form Icon
+                    iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                    iconCurrentChildForm.IconColor = color;
+                }
+                else
+                {
+                    // Button
+                    currentBtn = (IconButton)senderBtn;
+                    currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                    currentBtn.ForeColor = color;
+                    currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                    currentBtn.IconColor = color;
+                    //Left border button
+                    leftBorderBtn.BackColor = color;
+                    leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
+                    leftBorderBtn.Visible = true;
+                    leftBorderBtn.BringToFront();
+                    //Current Child Form Icon
+                    iconCurrentChildForm.IconChar = currentBtn.IconChar;
+                    iconCurrentChildForm.IconColor = color;
+                }
             }
+            DisableButton();
         }
 
         private void DisableButton()
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(11, 7, 17);
-                currentBtn.ForeColor = Color.Gainsboro;
-                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
-                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                if (tbSwitchTheme.Checked)
+                {
+                    currentBtn.BackColor = Color.FromArgb(11, 170, 247);
+                    currentBtn.ForeColor = Color.Gainsboro;
+                    currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                    currentBtn.IconColor = Color.Gainsboro;
+                    currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                }
+                else
+                {
+                    currentBtn.BackColor = Color.FromArgb(11, 7, 17);
+                    currentBtn.ForeColor = Color.Gainsboro;
+                    currentBtn.TextAlign = ContentAlignment.MiddleLeft;
+                    currentBtn.IconColor = Color.Gainsboro;
+                    currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                    currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                }
             }
         }
 
@@ -133,7 +215,14 @@ namespace Presentation
         #region MediaSubMenu
         private void btnMedia_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color1);
+            if (tbSwitchTheme.Checked)
+            {
+                ActivateButton(sender, RGBColors.lightBlue);
+            }
+            else
+            {
+                ActivateButton(sender, RGBColors.activeDarkBlue);
+            }
             showSubMenu(panelMediaSubMenu);
         }
 
@@ -163,7 +252,14 @@ namespace Presentation
         #region
         private void btnPlaylist_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color2);
+            if (tbSwitchTheme.Checked)
+            {
+                ActivateButton(sender, RGBColors.lightBlue);
+            }
+            else
+            {
+                ActivateButton(sender, RGBColors.activeDarkBlue);
+            }
             showSubMenu(panelPlaylistSubMenu);
         }
 
@@ -191,14 +287,21 @@ namespace Presentation
 
         private void btnEqualizer_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color3);
+            ActivateButton(sender, RGBColors.lightBlue);
             openChildForm(new Form3());
         }
 
         #region ToolsSubMenu
         private void btnTools_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color4);
+            if (tbSwitchTheme.Checked)
+            {
+                ActivateButton(sender, RGBColors.lightBlue);
+            }
+            else
+            {
+                ActivateButton(sender, RGBColors.activeDarkBlue);
+            }
             showSubMenu(panelToolsSubMenu);
         }
 
@@ -227,7 +330,7 @@ namespace Presentation
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender, RGBColors.color5);
+            ActivateButton(sender, RGBColors.lightBlue);
             openChildForm(new UserProfileForm());
         }
 
@@ -441,6 +544,95 @@ namespace Presentation
                 this.Opacity = 1.0D;
                 lblEstadoOpacidad.Text = "Activar";
                 lblEstadoOpacidad.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+        }
+
+        public void SetTheme()
+        {
+            #region btnMedia
+            setThemeButtons(btnMedia);
+
+            setIconButtonStyle(iconButton1);
+            setIconButtonStyle(iconButton2);
+            setIconButtonStyle(iconButton3);
+            setIconButtonStyle(iconButton4);
+            #endregion
+
+            #region btnPlaylist
+            setThemeButtons(btnPlaylist);
+
+            setIconButtonStyle(iconButton5);
+            setIconButtonStyle(iconButton6);
+            setIconButtonStyle(iconButton7);
+            setIconButtonStyle(iconButton8);
+            #endregion
+
+            // btnEqualizer
+
+            setThemeButtons(btnEqualizer);
+
+
+            #region btnTools
+            setThemeButtons(btnTools);
+
+            setIconButtonStyle(iconButton9);
+            setIconButtonStyle(iconButton10);
+            setIconButtonStyle(iconButton11);
+            setIconButtonStyle(iconButton12);
+            #endregion
+
+            // btnHelp
+            setThemeButtons(btnHelp);
+        }
+
+        private void tbSwitchTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (tbSwitchTheme.Checked)
+            {
+                panelMediaSubMenu.BackColor = Color.Gainsboro;
+                panelPlaylistSubMenu.BackColor = Color.Gainsboro;
+                panelToolsSubMenu.BackColor = Color.Gainsboro;
+                iconCurrentChildForm.BackColor = RGBColors.lightGray;
+                iconCurrentChildForm.ForeColor = Color.SlateGray;
+                panelTitleBar.BackColor = RGBColors.lightGray;
+                panelShadow.BackColor = RGBColors.panelShadowLight;
+                panelChildForm.BackColor = RGBColors.panelChildFormLight;
+                btnInicio.Image = Properties.Resources.J_MANAGEMENT_WHITE_LOGO;
+                panelSidebar.BackColor = RGBColors.panelSidebarLight;
+                iconMoon.ForeColor = Color.White;
+                iconSun.ForeColor = Color.DimGray;
+
+                SetTheme();
+
+                // Opacity controls
+                setLabelStyle(lblOpacidad);
+                tbOpacidad.OffBackColor = Color.DimGray;
+                tbOpacidad.OnBackColor = Color.Navy;
+                btnLogout.ForeColor = Color.Gainsboro;
+                btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            }
+            else
+            {
+                panelMediaSubMenu.BackColor = RGBColors.panelSubMenusDark;
+                panelPlaylistSubMenu.BackColor = RGBColors.panelSubMenusDark;
+                panelToolsSubMenu.BackColor = RGBColors.panelSubMenusDark;
+                iconCurrentChildForm.BackColor = RGBColors.darkBlue;
+                panelTitleBar.BackColor = RGBColors.darkBlue;
+                panelShadow.BackColor = RGBColors.panelShadowDark;
+                panelChildForm.BackColor = RGBColors.panelChildFormDark;
+                btnInicio.Image = Properties.Resources.J_MANAGEMENT_LIGHT_BLUE_LOGO;
+                panelSidebar.BackColor = RGBColors.panelSidebarDark;
+                iconMoon.ForeColor = Color.DeepSkyBlue;
+                iconSun.ForeColor = Color.White;
+
+                SetTheme();
+
+                // Opacity controls
+                setLabelStyle(lblOpacidad);
+                tbOpacidad.OffBackColor = Color.DimGray;
+                tbOpacidad.OnBackColor = Color.DodgerBlue;
+                btnLogout.ForeColor = Color.Gainsboro;
+                btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
             }
         }
     }
