@@ -366,8 +366,6 @@ namespace Presentation
         private void Reset()
         {
             DisableButton();
-
-            if ()
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitleChildForm.Text = "Inicio";
@@ -518,7 +516,6 @@ namespace Presentation
         private void MainForm_Load(object sender, EventArgs e)
         {
             //loadUserData();
-
             // ADMINISTRAR PERMISOS
             if (UserCache.Position == Positions.Accounting)
             {

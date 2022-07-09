@@ -11,6 +11,32 @@ namespace Presentation
 {
     static class Program
     {
+
+        /*  GUIA PARA USA EL CUSTOM DROPDOWN MENU
+         * 
+         *  CUANTO SE LE QUIERE ASIGNAR UN DROPDOWN PERSONALIZADO A UN BOTON, SE LE HACE DOBLE CLICK
+         *  PARA ENTRAR AL EVENTO CLICK DEL BOTON Y SE ESCRIBE LO SIGUIENTE:
+         *  
+         *  jmCustomDropdownMenu1.Show(iconButton1, iconButton1.Width, 0);
+         *  
+         *  ESTO CREA EL DROPDOWN PERSONALIZADO, PERO ESTE SE VERA DE COLOR BLANCO, SI DESEA VERLO DE
+         *  COLOR NEGRO, EN EL EVENTO LOAD DEL FORMULARIO SE ESCRIBE LO SIGUIENTE:
+         *  
+         *  jmCustomDropdownMenu1.IsMainMenu = true;
+         *  
+         *  ESTO VOLVERA EL DROPDOWN PERSONALIZADO DE COLOR NEGRO CON MORADO.
+         *  
+         *  POR ULTIMO, PARA CAMBIAR LOS COLORES DEL DROPDOWN PERSONALIZADO, EN EL EVENTO LOAD DEL FORMULARIO
+         *  SE ESTABLECEN LOS COLORES QUE SE DESEAN USAR, POR EJEMPLO:
+         *  
+         *  jmCustomDropdownMenu1.IsMainMenu = true;
+         *  jmCustomDropdownMenu1.PrimaryColor = Color.Red;
+         *  jmCustomDropdownMenu1.MenuItemTextColor = Color.Blue;
+         *  
+         *  
+         *  FIN DE LA GUIA.
+         */
+
         //Structs
         public struct RGBColors
         {
