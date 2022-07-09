@@ -366,6 +366,8 @@ namespace Presentation
         private void Reset()
         {
             DisableButton();
+
+            if ()
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitleChildForm.Text = "Inicio";
@@ -594,7 +596,6 @@ namespace Presentation
             if (tbSwitchTheme.Checked)
             {
                 #region iconsInWhiteTheme
-                iconCurrentChildForm.IconChar = IconChar.Home;
                 iconCurrentChildForm.BackColor = RGBColors.lightGray;
                 iconCurrentChildForm.ForeColor = Color.SlateGray;
                 panelMediaSubMenu.BackColor = Color.Gainsboro;
@@ -626,7 +627,6 @@ namespace Presentation
                 panelPlaylistSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 panelToolsSubMenu.BackColor = RGBColors.panelSubMenusDark;
                 iconCurrentChildForm.BackColor = RGBColors.darkBlue;
-                iconCurrentChildForm.IconChar = IconChar.Home;
                 panelTitleBar.BackColor = RGBColors.darkBlue;
                 panelShadow.BackColor = RGBColors.panelShadowDark;
                 panelChildForm.BackColor = RGBColors.panelChildFormDark;
