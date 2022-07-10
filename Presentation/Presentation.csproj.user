@@ -4,6 +4,9 @@
     <Compile Update="Forms\Assets\CustomMenuColorTable\JMCustomDropdownMenu.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="Forms\Assets\CustomProgressBar\JMCustomProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Update="Forms\Assets\CustomTextBox Design\JMCustomTextBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
