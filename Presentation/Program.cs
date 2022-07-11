@@ -77,7 +77,7 @@ namespace Presentation
             //Application.EnableVisualStyles();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new WelcomeForm());
         }
     }
 }

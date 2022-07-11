@@ -38,10 +38,7 @@ namespace Presentation
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.txtProgressValue = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.jmCustomProgressBar1 = new Presentation.Forms.Assets.CustomProgressBar.JMCustomProgressBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -111,51 +108,20 @@ namespace Presentation
             this.timer2.Interval = 30;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // progressBar1
+            // jmCustomProgressBar1
             // 
-            this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(182)))));
-            this.progressBar1.Location = new System.Drawing.Point(229, 363);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(530, 35);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 4;
-            // 
-            // txtProgressValue
-            // 
-            this.txtProgressValue.AutoSize = true;
-            this.txtProgressValue.BackColor = System.Drawing.Color.Transparent;
-            this.txtProgressValue.Enabled = false;
-            this.txtProgressValue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtProgressValue.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtProgressValue.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtProgressValue.Location = new System.Drawing.Point(515, 319);
-            this.txtProgressValue.Name = "txtProgressValue";
-            this.txtProgressValue.Size = new System.Drawing.Size(27, 32);
-            this.txtProgressValue.TabIndex = 5;
-            this.txtProgressValue.Text = "0";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(564, 319);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 32);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "%";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(383, 319);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 32);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Iniciando...";
+            this.jmCustomProgressBar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
+            this.jmCustomProgressBar1.ChannelHeight = 6;
+            this.jmCustomProgressBar1.ForeBackColor = System.Drawing.Color.RoyalBlue;
+            this.jmCustomProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.jmCustomProgressBar1.Location = new System.Drawing.Point(191, 337);
+            this.jmCustomProgressBar1.Name = "jmCustomProgressBar1";
+            this.jmCustomProgressBar1.ShowValue = Presentation.Forms.Assets.CustomProgressBar.TextPosition.Right;
+            this.jmCustomProgressBar1.Size = new System.Drawing.Size(582, 46);
+            this.jmCustomProgressBar1.SliderColor = System.Drawing.Color.RoyalBlue;
+            this.jmCustomProgressBar1.SliderHeight = 6;
+            this.jmCustomProgressBar1.TabIndex = 4;
+            this.jmCustomProgressBar1.Value = 20;
             // 
             // WelcomeForm
             // 
@@ -163,13 +129,10 @@ namespace Presentation
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(47)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(1000, 500);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.jmCustomProgressBar1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtProgressValue);
-            this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WelcomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -191,10 +154,7 @@ namespace Presentation
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label txtProgressValue;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Forms.Assets.CustomProgressBar.JMCustomProgressBar jmCustomProgressBar1;
     }
 }

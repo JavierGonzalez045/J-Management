@@ -30,7 +30,7 @@ namespace Presentation.Forms.Assets.CustomProgressBar
         private int sliderHeight = 6;
         private TextPosition showValue = TextPosition.Right;
         private string symbolBefore = "";
-        private string symbolAfter = "";
+        private string symbolAfter = "%";
         private bool showMaximun = false;
 
         //-> Others
