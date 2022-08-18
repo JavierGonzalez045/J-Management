@@ -366,8 +366,6 @@ namespace Presentation
         private void Reset()
         {
             DisableButton();
-
-            if ()
             iconCurrentChildForm.IconChar = IconChar.Home;
             iconCurrentChildForm.IconColor = Color.MediumPurple;
             lblTitleChildForm.Text = "Inicio";
