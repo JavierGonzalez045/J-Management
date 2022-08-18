@@ -13,7 +13,7 @@ namespace Persistence
 
         public ConnectionToSql()
         {
-            connectionString = "Server=DESKTOP-GV2110Q;Database= MyCompany; integrated security= true";
+            connectionString = "Server=JAVIER-PC;Database= Testing; integrated security= true";
         }
         protected SqlConnection GetConnection()
         {
